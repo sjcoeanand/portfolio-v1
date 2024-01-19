@@ -9,7 +9,7 @@ const routes: Routes = [
     component : LandingPageComponent
   },
   {
-    path : 'about',
+    path : 'about' ,
     component : AboutPageComponent
   },
 ];
