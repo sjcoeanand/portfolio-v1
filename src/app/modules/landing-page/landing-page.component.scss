@@ -1,0 +1,157 @@
+.header-section {
+    color: #fff;
+    font-weight: 300;
+
+    .header-image {
+        max-width: 50%;
+        margin: auto;
+    }
+}
+
+.highlight {
+    color: #4f8dff;
+}
+
+.experience {
+    margin-top: 10px;
+    border-radius: 2px;
+    padding: 0 5px;
+    color: #4f8dff;
+    border: 1px solid #39FF14;
+    font-size: 1.5rem;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.bordered-style {
+    height: 1px;
+    position: relative;
+    background-color: #4f8dff;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        background-color: #000;
+        height: 10px;
+        width: 10px;
+        transform: rotate(45deg);
+        border-right: 1px solid #4f8dff;
+        border-bottom: 1px solid #4f8dff;
+        top: -4px;
+    }
+}
+
+._comp {
+    padding: 2em 0;
+}
+
+._comp ._comp_li {
+    padding: 1.5em 2em;
+    border: 1px solid #000;
+    border-radius: 5em;
+    color: #bab9b9;
+    position: relative;
+}
+
+._comp_border:nth-child(2n+1) {
+    border-left: none;
+    border-right: 1px solid #7ff60c;
+}
+
+._comp_border {
+    padding: 2em;
+    line-height: 1.5em;
+}
+
+._comp_li ._comp_title {
+    color: #7ff60c;
+    font-size: 1.2em;
+}
+
+._comp_li ._comp_desig {
+    padding: 0.5em 0;
+}
+
+._comp_li ._comp_dur {
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    color: #fff;
+    border-radius: 2px;
+    padding: 0 5px;
+    display: inline-block;
+}
+
+._comp ._comp_li:before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    background-color: #000;
+    height: 20px;
+    width: 20px;
+    transform: rotate(45deg);
+}
+
+._comp ._comp_li._comp_li_1 {
+    text-align: right;
+    border-right: 2px solid #7ff60c;
+}
+
+._comp ._comp_li._comp_li_2 {
+    text-align: left;
+    margin-top: 8em;
+    border-left: 2px solid #7ff60c;
+}
+
+._comp ._comp_li._comp_li_1:before {
+    top: 75px;
+    right: -12.5px;
+    border-right: 2px solid #7ff60c;
+    border-top: 2px solid #7ff60c;
+}
+
+._comp ._comp_li._comp_li_1:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    top: 80px;
+    right: -20px;
+    background: #7ff60c;
+    z-index: 1;
+}
+
+._comp ._comp_li._comp_li_2:before {
+    bottom: 80px;
+    left: -10.5px;
+    border-left: 2px solid #7ff60c;
+    border-bottom: 2px solid #7ff60c;
+}
+
+._comp ._comp_li._comp_li_2:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 20px;
+    bottom: 85px;
+    left: -20px;
+    background: #7ff60c;
+    z-index: 1;
+}
+
+._signature {
+    color: #ccc;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 0.7em;
+    text-align: center;
+}
+
+._copyrights {
+    text-shadow: #7ff60c 0 0 5px;
+    color: #7df20c;
+    font-size: 1.1em;
+    text-align: center;
+}
