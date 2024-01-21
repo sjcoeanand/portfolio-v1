@@ -155,3 +155,51 @@
     font-size: 1.1em;
     text-align: center;
 }
+
+/* Mobile CSS */
+
+@media only screen and (max-width:767px) {
+    ._ms_title,
+    ._ms_counter {
+        font-size: 1em;
+    }
+    ._banner h1 {
+        font-size: 1.2em;
+    }
+    ._banner ._writing a {
+        font-size: 0.8em;
+    }
+    ._comp ._comp_li._comp_li_1 {
+        text-align: left;
+        border: 1px solid #000;
+        border-left: 2px solid #7ff60c;
+    }
+    ._comp ._comp_li._comp_li_1:before {
+        top: 90px;
+        left: -10px;
+        border-right: none;
+        border-top: none;
+        border-left: 1px solid #7ff60c;
+        border-bottom: 1px solid #7ff60c;
+    }
+    ._comp ._comp_li._comp_li_1:after {
+        top: 95px;
+        left: -25px;
+    }
+    ._comp ._comp_li._comp_li_2 {
+        margin-top: 0em;
+    }
+    ._comp_border:nth-child(n) {
+        border-left: 1px solid #7ff60c;
+        margin-left: 10px;
+    }
+    ._comp_border:nth-child(2n+1) {
+        margin-top: 0px;
+    }
+    ._skill img {
+        max-width: 30px;
+    }
+    ._comp_border:nth-child(2n+1){
+        border-right: none;
+    }
+}
