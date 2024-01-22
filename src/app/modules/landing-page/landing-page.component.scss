@@ -23,25 +23,14 @@
     display: inline-block;
 }
 
-.bordered-style {
-    height: 1px;
-    position: relative;
-    background-color: #4f8dff;
 
-    &::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        background-color: #000;
-        height: 10px;
-        width: 10px;
-        transform: rotate(45deg);
-        border-right: 1px solid #4f8dff;
-        border-bottom: 1px solid #4f8dff;
-        top: -4px;
-    }
+.skill-badge{
+    font-size: 1rem;
+    display: inline-block;
+    border: 1px solid #39FF14;
+    margin: 5px;
+    padding: 2px 5px;
 }
-
 ._comp {
     padding: 2em 0;
 }
@@ -184,6 +173,9 @@
     }
     ._comp ._comp_li._comp_li_1:after {
         top: 95px;
+        left: -25px;
+    }
+    ._comp ._comp_li._comp_li_2:after {
         left: -25px;
     }
     ._comp ._comp_li._comp_li_2 {
