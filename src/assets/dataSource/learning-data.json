@@ -1,0 +1,30 @@
+[{
+    "id" : 11,
+    "name" : "Promises",
+    "tag": "JavaScript",
+    "description" : "Promise is an object which represent eventual completion or failure of an asynchronus operation and its value. \nPromise has 3 states pending, fulfilled, rejected.\nPromise has few static methods \n1.Promise.all() 2.Promise.allSettled() 3.Promise.any()"
+},
+{
+    "id" : 12,
+    "name" : "Closures",
+    "tag": "JavaScript",
+    "description" : "Closure is function inside another function which has access to its outer scope variables or outer functions variables"
+},
+{
+    "id" : 2,
+    "name" : "Observables",
+    "tag": "RxJs",
+    "description" : "An Observable is a function that converts the ordinary stream of data into an Observable stream of data. You can think of Observable as a wrapper around the Ordinary stream of data."
+},
+{
+    "id" : 3,
+    "name" : "Subject",
+    "tag": "RxJs",
+    "description" : "An RxJS Subject is a special type of Observable that allows values to be multicast to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.A Subject is like an observable but can be multicast to many Observers. Subjects are like Event Emitters: they maintain a registry of many listeners.It is a part of the Reactive Extensions for JavaScript (RxJS) library, which is included by default in Angular projects."
+},
+{
+    "id" : 4,
+    "name" : "BehaviousSubject",
+    "tag": "RxJs",
+    "description" : "BehaviorSubjects are a type of Subject that: Has an initial value. Subscribers will receive the last emitted value upon subscription."
+}]

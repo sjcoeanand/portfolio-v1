@@ -1,0 +1,58 @@
+<div class="container">  
+    <h3 class="mt-3 mb-4">Different Concepts With Examples</h3>
+    <div class="learning">
+      <ul class="nav nav-tabs" id="myTab" role="tablist" >
+        <li class="nav-item" role="presentation1" *ngFor="let item of tablist">
+          <button class="nav-link" id="tab1" data-bs-toggle="tab" (click)="selectedTab(item)" data-bs-target="#openPanel" type="button" role="tab" aria-controls="js" aria-selected="true">{{item}}</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="d-flex justify-content-center" *ngIf="!filteredLearningData">
+          <div class="spinner-border  m-5"  role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <div class="tab-pane fade show active" id="openPanel" role="tabpanel" aria-labelledby="home-tab">
+          <div class="accordion" id="accordionExample" data-bs-theme="dark" *ngIf="filteredLearningData">
+            <div class="accordion-item" *ngFor="let item of filteredLearningData">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" (click)="getToast($event, item.name)" data-bs-toggle="collapse" 
+                [attr.data-bs-target]="'#test'+item.id" >
+                  {{item.name}}
+                </button>
+              </h2>
+              <div id="test{{item.id}}" class="accordion-collapse collapse">
+                <div class="accordion-body">
+                  <div>{{item.description}}</div> 
+                  <div class="titleInParagraph">{{item.code ? 'Sample Syntax' : ''}}</div>
+                  <pre class="code-section">{{item.code}}</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>   
+    </div>
+    <div class="toast-container position-fixed bottom-0 end-0 p-3 ">
+        <div id="liveToast" class="toast " [ngClass]="accordionClicked ? 'show' : 'hide'" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-primary-subtle">
+                <strong class="me-auto">Greetings !</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close" (click)="closeToast()"></button>
+            </div>
+            <div class="toast-body text-black bg-body" *ngIf="accordionHeading">
+                 You are on the way to learn {{accordionHeading}}
+            </div>
+            <div class="toast-body text-black bg-body" *ngIf="!accordionHeading">
+                You are on learning page
+           </div>
+        </div>
+    </div>
+</div>
+
+<!-- <div class="test-card">
+  <div class="card">
+    <div class="card-body text-danger">
+      This is some text within a card body.
+    </div>
+  </div>
+</div> -->

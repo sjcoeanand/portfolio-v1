@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  constructor(private router: Router){}
+  pageOpened:any = window.location.pathname;
+  ngOnInit(): void {    
+    console.log("pageOpened", this.pageOpened);
+    
+    if(this.pageOpened == "/learning"){
+      this.active1 = true
+    } else {
+      this.active1 = false;
+      this.active2 = false;
+    }
+  }
+  
   active1:boolean = false;
   active2:boolean = false;
   active0:boolean = true;
@@ -14,10 +28,17 @@ export class NavbarComponent {
     if(value == '0'){
       this.active0 = true;
       this.active1 = false;
-    }      
-        
+      this.active2 = false;
+      this.router.navigateByUrl('/')
+    }          
     if(value == '1'){
       this.active1 = true;
+      this.active2 = false;
+      this.router.navigateByUrl('/learning')
     }  
+    if(value == '2'){
+      this.active2 = true;
+      this.active1 = false;
+    }
  }
 }

@@ -1,0 +1,31 @@
+.learning {
+    .nav-tabs{
+        border-bottom: 1px solid #4f8dff;
+    }
+    .nav-link{
+        color: #fff;
+        background-color: #585858;
+        border: 1px solid #787878;
+        border-bottom: 0px;
+        &:hover{
+            border-color: #4f8dff;
+        }
+        &.active{
+            color: #4f8dff;            
+            border-color: #4f8dff;
+        }
+    }
+}
+
+.test-card{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fafbfc;
+    .card{
+        background: #ffffff;
+        border: 1px solid #d9e2ea;
+        padding: 1.5rem;
+        box-shadow: 0 5px 12px 1px #0041a533 !important;
+        border-radius: 16px;
+    }
+}

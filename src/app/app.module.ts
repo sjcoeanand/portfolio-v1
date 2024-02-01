@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './modules/landing-page/landing-page.component';
 import { NavbarComponent } from './modules/navbar/navbar.component';
+import { FrontendLearningComponent } from './modules/frontend-learning/frontend-learning.component';
+import { StockMarketComponent } from './modules/stock-market/stock-market.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    FrontendLearningComponent,
+    StockMarketComponent
   ],
   imports: [
     BrowserModule,
