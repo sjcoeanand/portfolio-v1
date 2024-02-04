@@ -157,7 +157,6 @@ obs1.subscribe(data => console.log(data))
   selectedTab(item1:any){
     this.filteredLearningData = this.learningData.filter((x1 :any)=> {
       if(x1.tag == item1){
-        console.log("item", item1);
         return x1
       }
     })
