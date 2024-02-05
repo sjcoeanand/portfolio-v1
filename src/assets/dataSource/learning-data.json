@@ -33,4 +33,16 @@
     "name" : "Palindrome Number",
     "tag": "DSA",
     "description" : "An Integer is palindrom when it reads same forward and backword."
+},
+{
+    "id" : 32,
+    "name" : "Unique Character String",
+    "tag": "DSA",
+    "description" : "Use of 'for of' and 'for loop' to find count of characters and first unique character from a string"
+},
+{
+    "id" : 33,
+    "name" : "Fibonacci series",
+    "tag": "DSA",
+    "description" : "Fibonacci series 0, 1, 1, 2, 3, 5, 8, 13 , 21..... \n how to ind Fibonacci number on given position \n Use of F(n) = F(n-1)+F(n-2) to find fibonacci number"
 }]

@@ -35,6 +35,12 @@ export class FrontendLearningComponent {
         if(x.name == 'Palindrome Number'){
           x['code'] = this.testDsaPalindrome
         }
+        if(x.name == 'Unique Character String'){
+          x['code'] = this.testFirstUniqChar
+        }
+        if(x.name == 'Fibonacci series'){
+          x['code'] = this.testFibonacci
+        }
         return x
       });    
       this.selectedTab('JavaScript')
@@ -163,6 +169,41 @@ obs1.subscribe(data => console.log(data))
   let res = isPalindrome(121)
   console.log('res = ', res)
   //output: res =  true`
+
+  testFirstUniqChar = `const uniqArray = function(str){
+      let obj = {};
+      for(let i = 0; i <str.length; i++){
+          !obj[str[i]] ? obj[str[i]] = 1 : obj[str[i]]++
+      }
+      console.log('count of all chars ', obj);
+      for(let key of Object.keys(obj)){
+          if(obj[key] === 1){
+              console.log('uniq = ', str.indexOf(key))
+              return str.indexOf(key);
+          }
+      }
+      return -1
+  }
+  uniqArray('anandshendage')
+  // output : 
+  count of all chars  { a: 3, n: 3, d: 2, s: 1, h: 1, e: 2, g: 1 }
+  uniq =  5`;
+
+  testFibonacci = `
+  function fib(n){
+      let defaultFib = [0,1];
+      for(let i = 2; i <= n ; i++){
+          defaultFib.push(defaultFib[i-1] + defaultFib[i-2])
+      }
+      console.log(defaultFib);
+      console.log(defaultFib[n]);
+      return defaultFib[n]
+  }
+  fib(5)
+  //output : 
+  [ 0, 1, 1, 2, 3, 5 ]
+  5
+  `
   
   filteredLearningData:any;
   selectedTab(item1:any){
