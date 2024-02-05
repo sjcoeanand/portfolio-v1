@@ -15,7 +15,7 @@ export class FrontendLearningComponent {
   pageOpened:any = window.location.pathname;
   accordionHeading:any; 
   private mySubscription!:Subscription;
-  tablist:any[] = ['JavaScript', 'RxJs', 'Angular', 'CSS', 'HTML'];
+  tablist:any[] = ['JavaScript', 'RxJs', 'DSA'];
 
   ngOnInit(): void {
     
@@ -31,6 +31,9 @@ export class FrontendLearningComponent {
         }
         if(x.name == 'Closures'){
           x['code'] = this.testClosures
+        }
+        if(x.name == 'Palindrome Number'){
+          x['code'] = this.testDsaPalindrome
         }
         return x
       });    
@@ -153,6 +156,14 @@ obs1.subscribe(data => console.log(data))
   //output
   firstClosure 6
   secondClosure 10`
+
+  testDsaPalindrome = `  let isPalindrome = function(item) {
+    return (item > 0) ? item === +item.toString().split('').reverse().join('') : false
+  }
+  let res = isPalindrome(121)
+  console.log('res = ', res)
+  //output: res =  true`
+  
   filteredLearningData:any;
   selectedTab(item1:any){
     this.filteredLearningData = this.learningData.filter((x1 :any)=> {
@@ -161,4 +172,24 @@ obs1.subscribe(data => console.log(data))
       }
     })
   }
+
+  palindromeNumber:any;
+  palindromChecked:boolean = false;
+  message:any = '';
+  isPalindromeNumber:boolean = false;
+  
+  isPalindrome(item:number){
+    this.palindromChecked = true;
+    if(item > 0) {
+      if(item === +item.toString().split('').reverse().join('')){        
+        this.message =  `${item} is Palindrome Number`; 
+      } else {
+        this.message =  `${item} is not Palindrome Number`;
+      }
+    } else {
+      this.palindromChecked = false;
+      this.message = "Number should be greater than 0" 
+    }
+  }
+
 }

@@ -24,6 +24,19 @@
               <div id="test{{item.id}}" class="accordion-collapse collapse">
                 <div class="accordion-body">
                   <div>{{item.description}}</div> 
+                  <div *ngIf="item.name == 'Palindrome Number'">
+                    <div class="row align-items-center">
+                      <div class="col-4">Enter Number to check its Palindrome or Not </div>
+                      <div class="col-2">
+                        <input type="number" [(ngModel)]="palindromeNumber" name="palindromeNumber">
+                      </div>
+                      <div class="col-1">
+                        <button type="button" class="btn btn-secondary btn-sm" (click)="isPalindrome(palindromeNumber)">Check</button>
+                      </div>
+                    </div>
+                    <div *ngIf="palindromChecked && message != ''" class="fw-bold border p-1 my-2 d-inline-block" 
+                      [ngClass]="[message.includes('is Palindrome') ? 'text-success' : 'text-danger' ]">{{message}} </div>
+                  </div>
                   <div class="titleInParagraph">{{item.code ? 'Sample Syntax' : ''}}</div>
                   <pre class="code-section">{{item.code}}</pre>
                 </div>

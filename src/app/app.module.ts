@@ -6,19 +6,19 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './modules/landing-page/landing-page.component';
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { FrontendLearningComponent } from './modules/frontend-learning/frontend-learning.component';
-import { StockMarketComponent } from './modules/stock-market/stock-market.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     NavbarComponent,
-    FrontendLearningComponent,
-    StockMarketComponent
+    FrontendLearningComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
