@@ -24,19 +24,56 @@
               <div id="test{{item.id}}" class="accordion-collapse collapse">
                 <div class="accordion-body">
                   <div>{{item.description}}</div> 
+                  <!-- palindrome input (+) -->
                   <div *ngIf="item.name == 'Palindrome Number'">
                     <div class="row align-items-center">
-                      <div class="col-4">Enter Number to check its Palindrome or Not </div>
-                      <div class="col-2">
+                      <div class="col-md-4">Enter Number to check its Palindrome or Not </div>
+                      <div class="col-md-2">
                         <input type="number" [(ngModel)]="palindromeNumber" name="palindromeNumber">
                       </div>
-                      <div class="col-1">
+                      <div class="col-md-1">
                         <button type="button" class="btn btn-secondary btn-sm" (click)="isPalindrome(palindromeNumber)">Check</button>
                       </div>
                     </div>
                     <div *ngIf="palindromChecked && message != ''" class="fw-bold border p-1 my-2 d-inline-block" 
-                      [ngClass]="[message.includes('is Palindrome') ? 'text-success' : 'text-danger' ]">{{message}} </div>
+                      [ngClass]="[message.includes('is Palindrome') ? 'text-success' : 'text-danger' ]">{{message}} 
+                    </div>
                   </div>
+                  <!-- palindrome input (-) -->
+
+                  <!-- fibonacci number (+) --> 
+                  <div *ngIf="item.name == 'Fibonacci series'">
+                    <div class="row">
+                      <div class="col-md-4">Get Fibonnaci Number at given position</div>
+                      <div class="col-md-2">
+                        <input type="number" [(ngModel)]="positionOfFibonacci" name="positionOfFibonacci">
+                      </div>
+                      <div class="col-md-1">
+                        <button type="button" class="btn btn-secondary btn-sm" (click)="findFibonacciNumber(positionOfFibonacci)">Check</button>
+                      </div>
+                    </div>
+                    <div *ngIf="findFibonacciNumberAtPosition != []" class="fw-bold border p-1 my-2 d-inline-block">Series : {{findFibonacciNumberSeriesTillPosition}} </div>
+                    <div *ngIf="findFibonacciNumberAtPosition != ''" class="fw-bold border p-1 my-2 d-inline-block">Fibonacci Number : {{findFibonacciNumberAtPosition}} </div>
+                  </div>
+                  <!-- fibonacci number (-) -->
+                  <!-- anagram words or phrases (+)-->
+                  <div *ngIf="item.name == 'Anagram'">
+                    <div class="row">
+                      <div class="col-md-4">Check Given 2 Words are Anagram or not</div>
+                      <div class="col-md-2">
+                        <input type="text" [(ngModel)]="anagramSource" placeholder="string 1" (keypress)="valueChanges($event)" name="anagramSource">
+                      </div>
+                      <div class="col-md-2">
+                        <input type="text" [(ngModel)]="anagramDestination" placeholder="string 2" (keypress)="valueChanges($event)" name="anagramDestination">
+                      </div>
+                      <div class="col-md-1">
+                        <button type="button" class="btn btn-secondary btn-sm" (click)="isAnagram(anagramSource, anagramDestination)">Check</button>
+                      </div>
+                    </div>
+                    <div *ngIf="submit" class="fw-bold border p-1 my-2 d-inline-block">Is Anagram Words : {{isAnagramResult}} </div>
+                  </div>
+                  <!-- anagram words or phrases (-)-->
+                  
                   <div class="titleInParagraph">{{item.code ? 'Sample Syntax' : ''}}</div>
                   <pre class="code-section">{{item.code}}</pre>
                 </div>

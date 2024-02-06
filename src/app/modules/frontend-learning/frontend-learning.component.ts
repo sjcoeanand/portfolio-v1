@@ -41,6 +41,12 @@ export class FrontendLearningComponent {
         if(x.name == 'Fibonacci series'){
           x['code'] = this.testFibonacci
         }
+        if(x.name == 'Recursion'){
+          x['code'] = this.testRecurssion
+        }
+        if(x.name == 'Anagram'){
+          x['code'] = this.testAnagram
+        }
         return x
       });    
       this.selectedTab('JavaScript')
@@ -204,7 +210,44 @@ obs1.subscribe(data => console.log(data))
   [ 0, 1, 1, 2, 3, 5 ]
   5
   `
+  testRecurssion = `
+  function recusrionfunc(n){
+    if(n <= 1) return n; // default we can consider fibonacci 0 and 1st element
+    return recusrionfunc(n-1) + recusrionfunc(n-2) //fibonacci formula F(n-1)+F(n-2)
+  }
+  console.log(recusrionfunc(3))
+  //output: 2
+  `
   
+  testAnagram = `
+    //for two single string input
+    function anagramFunc(sourceStr, targetStr){
+      return sourceStr.split('').sort().join('') === targetStr.split('').sort('').join('')
+    }
+
+    //group anagram words for array of strings/ words
+    let strArr = ['anand', 'danan', 'safe', 'fase', 'tea', 'eat', 'ate']
+    function groupAnagrams(strArr){
+      let outputObj = {};
+      for(let val of strArr){
+        let sortedValue = val.split('').sort().join('')
+        if(outputObj[sortedValue]){
+          outputObj[sortedValue].push(val)
+        } else {
+          outputObj[sortedValue] = [val]
+        }
+      }
+      return Object.values(outputObj)
+    }
+    groupAnagrams(strArr)
+
+    //output: [
+      ["anand","danan"],
+      ["safe","fase"],
+      ["tea","eat","ate"]
+  ] 
+  `;
+
   filteredLearningData:any;
   selectedTab(item1:any){
     this.filteredLearningData = this.learningData.filter((x1 :any)=> {
@@ -233,4 +276,29 @@ obs1.subscribe(data => console.log(data))
     }
   }
 
+  positionOfFibonacci:number = 0;
+  findFibonacciNumberSeriesTillPosition:any[] = [];
+  findFibonacciNumberAtPosition:any = '';
+  findFibonacciNumber(position: number){
+    let defaultFibSeries = [0,1];
+    for(let i = 2; i <= position ; i ++){
+      defaultFibSeries.push(defaultFibSeries[i - 1] + defaultFibSeries[i - 2])
+    }
+    this.findFibonacciNumberSeriesTillPosition = defaultFibSeries;
+    this.findFibonacciNumberAtPosition = defaultFibSeries[position];
+  }
+
+  anagramSource:any;
+  anagramDestination:any;
+  isAnagramResult:boolean = false;
+  submit:boolean = false;
+  valueChanges(e:any){
+    console.log('e =?',e );    
+    this.submit = false;
+  }
+  isAnagram(s:any, t:any){
+     this.submit = true;
+     this.isAnagramResult = (typeof(s) || typeof(t)) == 'number' ? (s.split('').sort().join('') === t.split('').sort().join('')) : (s.toLowerCase().split('').sort().join('') === t.toLowerCase().split('').sort().join(''));
+     return this.isAnagramResult
+  }
 }

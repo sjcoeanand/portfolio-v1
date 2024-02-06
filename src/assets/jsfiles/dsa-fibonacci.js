@@ -12,3 +12,10 @@ function fib(n){
     return defaultFib[n]
 }
 fib(5)
+
+// recursion
+function fibRecurssion(n){
+    if(n <= 1) return n; //as we know 0 and 1 elements of fibonacci series
+    return fibRecurssion(n-1) + fibRecurssion(n-2);
+}
+console.log(fibRecurssion(5))

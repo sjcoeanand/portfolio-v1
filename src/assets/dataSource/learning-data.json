@@ -45,4 +45,16 @@
     "name" : "Fibonacci series",
     "tag": "DSA",
     "description" : "Fibonacci series 0, 1, 1, 2, 3, 5, 8, 13 , 21..... \n how to ind Fibonacci number on given position \n Use of F(n) = F(n-1)+F(n-2) to find fibonacci number"
+},
+{
+    "id" : 34,
+    "name" :   "Recursion",
+    "tag": "DSA",
+    "description" : "A function which calls itself withing its body is called recursion"
+},
+{
+    "id" : 35,
+    "name" :   "Anagram",
+    "tag": "DSA",
+    "description" : "Anagram is word or phrase which is formed by rearranging letters of another word or phrase"
 }]
