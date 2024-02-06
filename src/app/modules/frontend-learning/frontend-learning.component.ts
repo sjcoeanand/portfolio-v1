@@ -47,6 +47,9 @@ export class FrontendLearningComponent {
         if(x.name == 'Anagram'){
           x['code'] = this.testAnagram
         }
+        if(x.name == 'Two Sum (Brute force solution)'){
+          x['code'] = this.testTwoSum
+        }
         return x
       });    
       this.selectedTab('JavaScript')
@@ -247,6 +250,21 @@ obs1.subscribe(data => console.log(data))
       ["tea","eat","ate"]
   ] 
   `;
+
+  testTwoSum = `
+  let arr=[2,3,5,7,1] target = 8
+  function twoSum(arr, target){
+    for(let i=0; i<arr.length; i++){
+      for(let j=i+1; j<arr.length; j++){
+        if(arr[i]+arr[j] === target){
+          return [i, j]
+        }
+      }
+    }
+  }
+  twoSum(arr, target)
+  // output: [1,2]
+  `
 
   filteredLearningData:any;
   selectedTab(item1:any){

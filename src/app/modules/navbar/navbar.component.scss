@@ -28,3 +28,9 @@
     background-image: url("data:image/svg+xml,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 23, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>");
     background-repeat: no-repeat;
 }
+
+.social-links{
+    i{
+        cursor: pointer;
+    }
+}

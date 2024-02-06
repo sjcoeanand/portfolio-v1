@@ -57,4 +57,10 @@
     "name" :   "Anagram",
     "tag": "DSA",
     "description" : "Anagram is word or phrase which is formed by rearranging letters of another word or phrase"
+},
+{
+    "id" : 36,
+    "name" :   "Two Sum (Brute force solution)",
+    "tag": "DSA",
+    "description" : "Given an array of integers nums and an integer target, return index of the two numbers such that they add up to target."
 }]
