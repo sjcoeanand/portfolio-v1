@@ -22,7 +22,7 @@ export class IntervalComponent {
     this.streamSubscription = streamInterval.subscribe((res:any)=> {
       this.serviceInstance.printStream(res, "streamContainer1");
       this.serviceInstance.printStream(res, "streamContainer2");
-      if(res > 8){
+      if(res > 4){
         this.streamSubscription.unsubscribe();
       }
     })
@@ -31,7 +31,7 @@ export class IntervalComponent {
     let streamTimer = timer(3000, 300)
     this.streamSubscriptionTimer = streamTimer.subscribe((res)=>{
       this.serviceInstance.printStream(res, "streamContainer3");
-      if(res > 5){
+      if(res > 4){
         this.streamSubscriptionTimer.unsubscribe();
       }
     })
