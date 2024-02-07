@@ -7,8 +7,5 @@ import { Router } from '@angular/router';
   styleUrls: ['./observable-sikho.component.scss']
 })
 export class ObservableSikhoComponent {  
-  constructor(private router : Router){}
-  redirectToLearning(){
-    this.router.navigateByUrl('learning')
-  }
+ 
 }

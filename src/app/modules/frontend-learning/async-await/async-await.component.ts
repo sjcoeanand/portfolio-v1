@@ -11,6 +11,7 @@ export class AsyncAwaitComponent {
   dataFetchedWithPromise:any;
   dataFetchedWithAsync:any;
   dataFetchedWithFetch:any;
+  dataFetchedWithFetchTitle:any;
 
   dellData = {
     brand : 'Dell',
@@ -78,14 +79,19 @@ export class AsyncAwaitComponent {
       }
     }
     if(type == 'fetch'){
-      this.dataFetchedWithFetch = 'Fetching Data ...';    
+      this.dataFetchedWithFetchTitle = 'Fetching Data ...';    
       this.dataFetchedWithFetch = await this.fetchMethod().then(res => res)
     }
   }
 
   fetchMethod(){
+    this.dataFetchedWithFetch = []
     return fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => response.json())
+    .then(response => {
+      this.dataFetchedWithFetchTitle = 'See Post data below';
+      return response.json()
+    })
+    
   }
 
   redirectToLearning(){

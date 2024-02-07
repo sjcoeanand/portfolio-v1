@@ -1,7 +1,7 @@
 <div class="container">
   <div class="d-flex justify-content-between my-4"><h2>Async / Await</h2> <button type="button"  class="btn btn-primary btn-sm" (click)="redirectToLearning()">Back to Learning</button></div>
   <div class="row">
-    <div class="col">
+    <div class="col-md-4 mb-2">
         <div class="card text-white bg-dark" >
             <div class="card-body">
                 <h6 class="card-title">Example 1 : With Promise</h6>
@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <div class="col">
+    <div class="col-md-4 mb-2">
         <div class="card text-white bg-dark" >
             <div class="card-body">
                 <h6 class="card-title">Example 2 : With Async Await</h6>
@@ -25,13 +25,32 @@
             </div>
         </div>
     </div>
-    <div class="col">
+    <div class="col-md-4 mb-2">
         <div class="card text-white bg-dark" >
             <div class="card-body">
                 <h6 class="card-title">Example 3 : With Fetch</h6>
                 <button type="button"  class="btn btn-secondary btn-sm" (click)="fetchWithPromise('fetch','dell')">Fetch Posts</button>
                 <hr>
-                <p class="card-text"><b>Data : </b> {{dataFetchedWithFetch | json}}</p>
+                <p class="card-text"><b>Data : </b> {{dataFetchedWithFetchTitle}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="dataFetchedWithFetch?.length > 0">
+    <div class="col-md-12">
+        <div class="card text-white bg-dark">
+            <div class="card-body">
+                <div class="card text-white bg-dark mb-2 border border-warning" *ngFor="let item of dataFetchedWithFetch">
+                    <div class="card-header">
+                      {{item.title}}
+                    </div>
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p>{{item.body}}</p>
+                        <footer class="blockquote-footer">Author - <cite title="Source Title">Anand S</cite></footer>
+                      </blockquote>
+                    </div>
+                  </div>
             </div>
         </div>
     </div>

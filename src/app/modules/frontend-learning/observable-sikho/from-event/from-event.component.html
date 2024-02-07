@@ -1,0 +1,29 @@
+<div class="d-flex justify-content-between my-4">
+    <h2>From Event</h2> <button type="button"  class="btn btn-primary btn-sm" (click)="redirectToObservable()">Back to Observable List</button>
+</div>
+<div class="row">
+    <div class="col-md-4 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title">From Event : using button click</h6>
+                <button type="button" #fromEventBtn class="btn btn-secondary btn-sm border-white" >Add Stream Data</button>                
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Data Stream 1</h6>
+                <ul id="streamContainer1" class="mb-0 stream-data"></ul>             
+            </div>
+        </div>
+    </div>
+    <div class="col-md-2 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Data Stream 2</h6>
+                <ul id="streamContainer2" class="mb-0 stream-data"></ul>             
+            </div>
+        </div>
+    </div>
+</div>
