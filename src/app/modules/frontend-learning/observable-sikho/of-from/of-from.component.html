@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-between my-4">
+    <h3>Of and From</h3>
+    <p>-</p> 
+    <div>
+      <button type="button"  class="btn btn-primary btn-sm" (click)="redirectToObservable()">Back to Observable List</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 mb-2">
+        <hr>
+        <b>OF EXAMPLES - </b>
+        <hr>
+    </div>
+    <div class="col-md-6 mb-2">
+        <div class="bg-light text-black p-2"><b>Data :</b> of('Narendra', 'Amit', 'Rahul')</div>
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Data Stream 1 - of()</h6>
+                <ul id="streamContainer1" class="mb-0"></ul>            
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 mb-2">
+        <div class="bg-light text-black p-2"><b>Data :</b> of(&#123; 'name1 : 'Narendra', name2 : 'Amit', name3 : 'Rahul' &#125;) </div>
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Data Stream 2 - of()</h6>
+                <ul class="mb-0">
+                    <li><b>name1 : </b> {{ofObjectData.name1}}</li>
+                    <li><b>name2 : </b> {{ofObjectData.name2}}</li>
+                    <li><b>name3 : </b> {{ofObjectData.name3}}</li>
+                </ul>               
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12 my-3">
+        <hr>
+        <b>FROM EXAMPLES - </b>
+        <hr>
+    </div>
+    <div class="col-md-4 mb-2">
+        <div class="bg-light text-black p-2"><b>Data in Array:</b> from['User1', 'User2', 'User3']</div>
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Data Stream - from 1</h6>
+                <ul id="streamContainer2" class="mb-0"></ul>            
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-2">
+        <div class="bg-light text-black p-2"><b>Promise to Observable using from</b></div>
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Data Stream - from 2</h6>
+                <ul id="streamContainer3" class="mb-0"></ul>            
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-2">
+        <div class="bg-light text-black p-2"><b>String to Observable using from - from['welcome geeks']</b></div>
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Data Stream - from 3</h6>
+                <ul id="streamContainer4" class="mb-0"></ul>            
+            </div>
+        </div>
+    </div>
+</div>

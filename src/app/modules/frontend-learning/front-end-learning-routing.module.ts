@@ -5,6 +5,8 @@ import { AsyncAwaitComponent } from './async-await/async-await.component';
 import { ObservableSikhoComponent } from './observable-sikho/observable-sikho.component';
 import { FromEventComponent } from './observable-sikho/from-event/from-event.component';
 import { TopicListComponent } from './observable-sikho/topic-list/topic-list.component';
+import { IntervalComponent } from './observable-sikho/interval/interval.component';
+import { OfFromComponent } from './observable-sikho/of-from/of-from.component';
 
 const routes: Routes = [
   {
@@ -26,8 +28,15 @@ const routes: Routes = [
       {
         path : 'from-event',
         component : FromEventComponent
+      },
+      {
+        path : 'interval',
+        component : IntervalComponent
+      },
+      {
+        path : 'of-from',
+        component : OfFromComponent
       }
-      
     ]
   }
 ];
