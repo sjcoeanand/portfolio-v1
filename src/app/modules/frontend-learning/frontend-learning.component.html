@@ -73,7 +73,16 @@
                     <div *ngIf="submit" class="fw-bold border p-1 my-2 d-inline-block">Is Anagram Words : {{isAnagramResult}} </div>
                   </div>
                   <!-- anagram words or phrases (-)-->
-                  
+                  <!-- async await (+) -->
+                  <div *ngIf="item.name == 'Async/Await'">
+                    <button type="button" routerLink="async-await" class="btn btn-primary btn-sm">View More Details</button>
+                  </div>
+                  <!-- async await (-) -->
+                  <!-- observable practical sikho (+) -->
+                  <div *ngIf="item.name == 'Observables'">
+                    <button type="button" routerLink="observable-sikho" class="btn btn-warning btn-sm my-2">Learn More About Observables</button>
+                  </div>
+                  <!-- observable practical sikho (-) -->
                   <div class="titleInParagraph">{{item.code ? 'Sample Syntax' : ''}}</div>
                   <pre class="code-section">{{item.code}}</pre>
                 </div>

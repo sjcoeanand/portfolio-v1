@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './modules/landing-page/landing-page.component';
-import { FrontendLearningComponent } from './modules/frontend-learning/frontend-learning.component';
 const routes: Routes = [
   {
     path : '',
@@ -9,7 +8,10 @@ const routes: Routes = [
   },
   {
     path : 'learning',
-    component : FrontendLearningComponent
+    loadChildren : () => import('./modules/frontend-learning/front-end-learning.module').then(r => r.FrontEndLearningModule),
+    data : {
+      breadcumb : 'Learning'
+    }
   },
   {
     path: '**', 

@@ -294,6 +294,7 @@ obs1.subscribe(data => console.log(data))
     }
   }
 
+  // fibonacci method
   positionOfFibonacci:number = 0;
   findFibonacciNumberSeriesTillPosition:any[] = [];
   findFibonacciNumberAtPosition:any = '';
@@ -306,6 +307,7 @@ obs1.subscribe(data => console.log(data))
     this.findFibonacciNumberAtPosition = defaultFibSeries[position];
   }
 
+  // anagram method
   anagramSource:any;
   anagramDestination:any;
   isAnagramResult:boolean = false;

@@ -11,22 +11,16 @@
     "description" : "Closure is function inside another function which has access to its outer scope variables or outer functions variables"
 },
 {
+    "id" : 13,
+    "name" : "Async/Await",
+    "tag": "JavaScript",
+    "description" : "The async keyword transforms a regular JavaScript function into an asynchronous function, causing it to return a Promise. The await keyword is used inside an async function to pause its execution and wait for a Promise to resolve before continuing"
+},
+{
     "id" : 21,
     "name" : "Observables",
     "tag": "RxJs",
     "description" : "An Observable is a function that converts the ordinary stream of data into an Observable stream of data. You can think of Observable as a wrapper around the Ordinary stream of data."
-},
-{
-    "id" : 22,
-    "name" : "Subject",
-    "tag": "RxJs",
-    "description" : "An RxJS Subject is a special type of Observable that allows values to be multicast to many Observers. While plain Observables are unicast (each subscribed Observer owns an independent execution of the Observable), Subjects are multicast.A Subject is like an observable but can be multicast to many Observers. Subjects are like Event Emitters: they maintain a registry of many listeners.It is a part of the Reactive Extensions for JavaScript (RxJS) library, which is included by default in Angular projects."
-},
-{
-    "id" : 4,
-    "name" : "BehaviousSubject",
-    "tag": "RxJs",
-    "description" : "BehaviorSubjects are a type of Subject that: Has an initial value. Subscribers will receive the last emitted value upon subscription."
 },
 {
     "id" : 31,

@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="d-flex justify-content-between my-4"><h2>Async / Await</h2> <button type="button"  class="btn btn-primary btn-sm" (click)="redirectToLearning()">Back to Learning</button></div>
+  <div class="row">
+    <div class="col">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title">Example 1 : With Promise</h6>
+                <button type="button"  class="btn btn-secondary btn-sm" (click)="fetchWithPromise('promise','dell')">Buy Dell</button>
+                <button type="button"  class="btn btn-secondary btn-sm ms-3" (click)="fetchWithPromise('promise','hp')">Buy Hp</button>
+                <button type="button"  class="btn btn-secondary btn-sm ms-3" (click)="fetchWithPromise('promise','other')">Buy Other</button>
+                <hr>
+                <p class="card-text"><b>Data : </b> {{dataFetchedWithPromise | json}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title">Example 2 : With Async Await</h6>
+                <button type="button"  class="btn btn-secondary btn-sm" (click)="fetchWithPromise('asyncAwait','dell')">Buy Dell</button>
+                <button type="button"  class="btn btn-secondary btn-sm ms-3" (click)="fetchWithPromise('asyncAwait','hp')">Buy Hp</button>
+                <button type="button"  class="btn btn-secondary btn-sm ms-3" (click)="fetchWithPromise('asyncAwait','other')">Buy Other</button>
+                <hr>
+                <p class="card-text"><b>Data : </b> {{dataFetchedWithAsync | json}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title">Example 3 : With Fetch</h6>
+                <button type="button"  class="btn btn-secondary btn-sm" (click)="fetchWithPromise('fetch','dell')">Fetch Posts</button>
+                <hr>
+                <p class="card-text"><b>Data : </b> {{dataFetchedWithFetch | json}}</p>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

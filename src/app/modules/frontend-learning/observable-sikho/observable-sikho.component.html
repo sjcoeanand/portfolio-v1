@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="d-flex justify-content-between my-4"><h2>Observables</h2> <button type="button"  class="btn btn-primary btn-sm" (click)="redirectToLearning()">Back to Learning</button></div>
+        <div class="row">
+            <div class="col-6">
+                <h4>Observable stream</h4>
+                <ul>
+                    <li>User Input (like click)</li>
+                    <li>http request</li>
+                    <li>array or objects</li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <h4>Observable Handle (Subscribe)</h4>
+                <ul class="d-flex">
+                    <li class="me-4">Data</li>
+                    <li class="me-4">Error</li>
+                    <li class="me-4">Completion</li>
+                </ul>
+                <code>.subscribe(
+                    (data)=> console.log(data)
+                    (error)=> console.log(data)
+                    ()=> console.log('Completed')
+                    )</code>
+            </div>
+        </div>
+    </div>
