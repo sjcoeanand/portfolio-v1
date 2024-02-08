@@ -50,6 +50,9 @@ export class FrontendLearningComponent {
         if(x.name == 'Two Sum (Brute force solution)'){
           x['code'] = this.testTwoSum
         }
+        if(x.name == 'Best Time to Buy and Sell Stock'){
+          x['code'] = this.testBestTimeTobuyStock
+        }
         return x
       });    
       this.selectedTab('JavaScript')
@@ -321,4 +324,26 @@ obs1.subscribe(data => console.log(data))
      this.isAnagramResult = (typeof(s) || typeof(t)) == 'number' ? (s.split('').sort().join('') === t.split('').sort().join('')) : (s.toLowerCase().split('').sort().join('') === t.toLowerCase().split('').sort().join(''));
      return this.isAnagramResult
   }
+
+
+  testBestTimeTobuyStock = `
+  let maxProfit =  function(prices){
+    let overAllProfit = 0;
+    for(let i=0; i<prices.length-1; i++){
+      for(let j=i+1; j<prices.length; j++){
+          let currentProfit = prices[j]-prices[i]
+        if(currentProfit > overAllProfit) overAllProfit = currentProfit
+      }
+    }
+    console.log("maxProfit = ", overAllProfit);
+    return overAllProfit
+  }
+
+  maxProfit([7,1,5,3,6,4])
+  maxProfit([7,6,4,3,1])
+
+  //output: 
+  maxProfit =  5
+  maxProfit =  0
+  `
 }
