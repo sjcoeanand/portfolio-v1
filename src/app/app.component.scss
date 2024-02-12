@@ -9,3 +9,9 @@
         margin-bottom: 2px;
     }
 }
+::ng-deep ul{
+    padding-left: 0px;
+    li{
+        list-style:none;
+    }
+}

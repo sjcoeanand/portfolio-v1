@@ -1,0 +1,14 @@
+.filter-operator{
+    .bi{
+        cursor: pointer;
+    }
+    label{
+        font-size: 0.8rem;
+        color: #ccc;
+    }
+    .disabled-btn{
+        opacity: 0.2;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+}

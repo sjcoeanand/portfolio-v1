@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-between my-4">
+    <h3>Custom Observables</h3>
+    <div>
+      <button type="button"  class="btn btn-primary btn-sm" (click)="redirectToObservable()">Back to Observable List</button>
+    </div>
+</div>
+<div class="row text-white bg-dark py-3  custom-obs">
+    <div class="col-md-2">
+        <h6 class="card-title text-warning mb-2">Ex.1 - Manual</h6>
+        <ul id="custObs1" class="mb-0" [ngClass]="(obsStatus1 == 'success') ? 'success' : (obsStatus1 == 'failed') ? 'danger' : ''"></ul> 
+    </div>
+    <div class="col-md-2">
+        <h6 class="card-title text-warning mb-2">Ex.2 - Custom Interval </h6>
+        <ul id="custObs2" class="mb-0" [ngClass]="(obsStatus2 == 'success') ? 'success' : (obsStatus2 == 'failed') ? 'danger' : ''"></ul> 
+    </div>
+    <div class="col-md-6">
+        <h6 class="card-title text-warning mb-2">Ex.3 - Randdom Names </h6>
+        <div class="random-names-array"><b>Random Number : </b> 'Anand', 'Amol', 'Ashish', 'Abhishek', 'Ajinkya', 'Ajit'</div>
+        <div class="mt-3">
+            <b>Random Name : </b> <span class="text-warning">{{randomName}}</span>
+        </div>
+        <div class="badge bg-primary mt-2" [ngClass]="status == 'success' ?  'bg-success' : status == 'failed' ? 'bg-danger' : '' ">
+            {{status ? status : 'Running'}}
+        </div>
+    </div>
+</div>

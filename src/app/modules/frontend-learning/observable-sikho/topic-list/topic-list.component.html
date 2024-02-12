@@ -20,23 +20,21 @@
             <li class="me-4">Error</li>
             <li class="me-4">Completion</li>
         </ul>
-        <code>.subscribe(
-            (data)=> console.log(data)
-            (error)=> console.log(data)
-            ()=> console.log('Completed')
-            )</code>
+        <div>.subscribe with
+          (next: , error: , complete:)
+        </div>
     </div>
 </div>
 <hr>
 <div class="row observable-card">
-    <div class="col-md-3 mb-2">
-        <div class="card text-white bg-dark text-center border-primary" routerLink="from-event">
+    <div class="col-md-3 mb-2" *ngFor="let item of rxjsTopicList">
+        <div class="card text-white bg-dark text-center border-primary" [routerLink]="item.routerLinkPath">
             <div class="card-body text-primary">
-              From Event
+              {{item.name}}
             </div>
           </div>
     </div>
-    <div class="col-md-3 mb-2">
+    <!-- <div class="col-md-3 mb-2">
       <div class="card text-white bg-dark text-center border-primary" routerLink="interval">
           <div class="card-body text-primary">
             Interval
@@ -50,5 +48,12 @@
           </div>
         </div>
     </div>
+    <div class="col-md-3 mb-2">
+      <div class="card text-white bg-dark text-center border-primary" routerLink="custom-observable">
+          <div class="card-body text-primary">
+            Custom Observable
+          </div>
+        </div>
+    </div> -->
     
 </div>

@@ -1,0 +1,23 @@
+::ng-deep .custom-obs {
+    ul {
+        padding-left: 0px;
+        li {
+            border: 1px solid #ccc;
+            padding: 0px 10px;
+            list-style: none;
+            margin-bottom: 5px;
+            border-radius: 20px;
+            border:1px solid #bbb;
+            background-color: #747474;
+        }
+        &.success li{border:1px solid green; background-color: #344834;}
+        &.danger li{border:1px solid red; background-color: #6a5454;}
+    }
+}
+.random-names-array{
+    padding: 15px;
+    border:1px solid #bbb;
+    background-color: #747474;
+    border-radius: 20px;
+    
+}

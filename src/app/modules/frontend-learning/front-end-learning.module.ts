@@ -8,6 +8,11 @@ import { FromEventComponent } from './observable-sikho/from-event/from-event.com
 import { TopicListComponent } from './observable-sikho/topic-list/topic-list.component';
 import { IntervalComponent } from './observable-sikho/interval/interval.component';
 import { OfFromComponent } from './observable-sikho/of-from/of-from.component';
+import { CustomObservableComponent } from './observable-sikho/custom-observable/custom-observable.component';
+import { MapComponent } from './observable-sikho/map/map.component';
+import { FilterComponent } from './observable-sikho/filter/filter.component';
+import { FormsModule } from '@angular/forms';
+import { TapComponent } from './observable-sikho/tap/tap.component';
 
 
 @NgModule({
@@ -17,11 +22,15 @@ import { OfFromComponent } from './observable-sikho/of-from/of-from.component';
     FromEventComponent,
     TopicListComponent,
     IntervalComponent,
-    OfFromComponent
+    OfFromComponent,
+    CustomObservableComponent,
+    MapComponent,
+    FilterComponent,
+    TapComponent
   ],
   imports: [
     CommonModule,
-    FrontEndLearningRoutingModule
+    FrontEndLearningRoutingModule,FormsModule
   ]
 })
 export class FrontEndLearningModule { }
