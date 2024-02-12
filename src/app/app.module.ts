@@ -8,18 +8,20 @@ import { LandingPageComponent } from './modules/landing-page/landing-page.compon
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { FrontendLearningComponent } from './modules/frontend-learning/frontend-learning.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     NavbarComponent,
-    FrontendLearningComponent
+    FrontendLearningComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule 
+    FormsModule ,
+    HttpClientModule
   ],
   providers: [ {provide : LocationStrategy , useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]

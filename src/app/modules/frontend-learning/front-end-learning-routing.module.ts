@@ -11,6 +11,8 @@ import { OfFromComponent } from './observable-sikho/of-from/of-from.component';
 import { MapComponent } from './observable-sikho/map/map.component';
 import { FilterComponent } from './observable-sikho/filter/filter.component';
 import { TapComponent } from './observable-sikho/tap/tap.component';
+import { TakeObsComponent } from './observable-sikho/take-obs/take-obs.component';
+import { RetryScanComponent } from './observable-sikho/retry-scan/retry-scan.component';
 
 const routes: Routes = [
   {
@@ -56,6 +58,14 @@ const routes: Routes = [
       {
         path : 'tap-obs',
         component : TapComponent
+      },
+      {
+        path : 'take-obs',
+        component : TakeObsComponent
+      },
+      {
+        path : 'retry-obs',
+        component : RetryScanComponent
       }
     ]
   }

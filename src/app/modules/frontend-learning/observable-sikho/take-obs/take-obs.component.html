@@ -1,0 +1,48 @@
+<div class="d-flex justify-content-between my-2">
+    <h3>Take, TakeLast, TakeUntil Operator</h3>
+    <div>
+      <button type="button"  class="btn btn-primary btn-sm" (click)="redirectToObservable()">Back to List</button>
+    </div>
+</div>
+<div>Used to perform side-effects for notifications from the source observable</div>
+<div class="row">
+    <div class="col-md-12 mb-2">
+        <div class="sample-json"><b>Country List Input : </b><span class="text-warning">["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua &amp; Barbuda"]</span></div>
+    </div>
+    <div class="col-md-4 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">
+                    Example 1 : Take(4)
+                </h6>     
+                <div class="mt-3">
+                    <ul id="countryList1"></ul>
+                </div>            
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">
+                    Example 2 : TakeLast(3)
+                </h6>     
+                <div class="mt-3">
+                    <ul id="countryList2"></ul>
+                </div>            
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">
+                    Tap Example 1
+                </h6>     
+                <div class="mt-3">
+                    <ul id="countryList3"></ul>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>

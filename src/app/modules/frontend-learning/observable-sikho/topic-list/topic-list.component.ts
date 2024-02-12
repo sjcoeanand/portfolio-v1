@@ -36,6 +36,14 @@ export class TopicListComponent {
     {
       name : 'Tap',
       routerLinkPath : 'tap-obs'
+    },
+    {
+      name : 'Take',
+      routerLinkPath : 'take-obs'
+    },
+    {
+      name : 'Retry, Scan',
+      routerLinkPath : 'retry-obs'
     }
 ]
   redirectToLearning(){

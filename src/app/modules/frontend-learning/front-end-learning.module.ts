@@ -13,6 +13,8 @@ import { MapComponent } from './observable-sikho/map/map.component';
 import { FilterComponent } from './observable-sikho/filter/filter.component';
 import { FormsModule } from '@angular/forms';
 import { TapComponent } from './observable-sikho/tap/tap.component';
+import { TakeObsComponent } from './observable-sikho/take-obs/take-obs.component';
+import { RetryScanComponent } from './observable-sikho/retry-scan/retry-scan.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { TapComponent } from './observable-sikho/tap/tap.component';
     CustomObservableComponent,
     MapComponent,
     FilterComponent,
-    TapComponent
+    TapComponent,
+    TakeObsComponent,
+    RetryScanComponent
   ],
   imports: [
     CommonModule,
