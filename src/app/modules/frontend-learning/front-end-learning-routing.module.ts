@@ -13,6 +13,7 @@ import { FilterComponent } from './observable-sikho/filter/filter.component';
 import { TapComponent } from './observable-sikho/tap/tap.component';
 import { TakeObsComponent } from './observable-sikho/take-obs/take-obs.component';
 import { RetryScanComponent } from './observable-sikho/retry-scan/retry-scan.component';
+import { ScanComponent } from './observable-sikho/scan/scan.component';
 
 const routes: Routes = [
   {
@@ -66,6 +67,10 @@ const routes: Routes = [
       {
         path : 'retry-obs',
         component : RetryScanComponent
+      },
+      {
+        path : 'scan-obs',
+        component : ScanComponent
       }
     ]
   }

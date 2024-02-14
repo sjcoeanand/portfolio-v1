@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { TapComponent } from './observable-sikho/tap/tap.component';
 import { TakeObsComponent } from './observable-sikho/take-obs/take-obs.component';
 import { RetryScanComponent } from './observable-sikho/retry-scan/retry-scan.component';
+import { ScanComponent } from './observable-sikho/scan/scan.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { RetryScanComponent } from './observable-sikho/retry-scan/retry-scan.com
     FilterComponent,
     TapComponent,
     TakeObsComponent,
-    RetryScanComponent
+    RetryScanComponent,
+    ScanComponent
   ],
   imports: [
     CommonModule,

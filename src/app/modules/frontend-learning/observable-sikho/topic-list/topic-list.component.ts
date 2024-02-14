@@ -42,8 +42,12 @@ export class TopicListComponent {
       routerLinkPath : 'take-obs'
     },
     {
-      name : 'Retry, Scan',
+      name : 'Retry',
       routerLinkPath : 'retry-obs'
+    },
+    {
+      name : 'Scan',
+      routerLinkPath : 'scan-obs'
     }
 ]
   redirectToLearning(){
