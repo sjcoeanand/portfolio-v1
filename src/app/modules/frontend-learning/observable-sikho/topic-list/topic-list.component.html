@@ -30,30 +30,8 @@
     <div class="col-md-3 mb-2" *ngFor="let item of rxjsTopicList">
         <div class="card text-white bg-dark text-center border-primary" [routerLink]="item.routerLinkPath">
             <div class="card-body text-primary">
-              {{item.name}}
+              {{item.name | stringLimit}}
             </div>
           </div>
-    </div>
-    <!-- <div class="col-md-3 mb-2">
-      <div class="card text-white bg-dark text-center border-primary" routerLink="interval">
-          <div class="card-body text-primary">
-            Interval
-          </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-2">
-      <div class="card text-white bg-dark text-center border-primary" routerLink="of-from">
-          <div class="card-body text-primary">
-            Of From
-          </div>
-        </div>
-    </div>
-    <div class="col-md-3 mb-2">
-      <div class="card text-white bg-dark text-center border-primary" routerLink="custom-observable">
-          <div class="card-body text-primary">
-            Custom Observable
-          </div>
-        </div>
-    </div> -->
-    
+    </div>    
 </div>

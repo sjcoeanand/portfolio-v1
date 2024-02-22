@@ -48,6 +48,18 @@ export class TopicListComponent {
     {
       name : 'Scan',
       routerLinkPath : 'scan-obs'
+    },
+    {
+      name : 'Debounce and DistinctUntillChanged',
+      routerLinkPath : 'debounce-time'
+    },
+    {
+      name : 'Subject & BehaviourSubject',
+      routerLinkPath : 'subject-bsub'
+    },
+    {
+      name : 'Replay Subject',
+      routerLinkPath : 'replay-subject'
     }
 ]
   redirectToLearning(){

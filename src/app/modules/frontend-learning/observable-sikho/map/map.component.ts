@@ -1,7 +1,7 @@
 import { Subscription, from, interval, map, subscribeOn, toArray } from 'rxjs';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { ObserverServiceService } from 'src/app/services/observer-service.service';
+import { ObserverServiceService } from 'src/app/services/ObserverServiceService';
 
 @Component({
   selector: 'app-map',

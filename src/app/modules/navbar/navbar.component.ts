@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {  Router } from '@angular/router';
+import { ObserverServiceService } from 'src/app/services/ObserverServiceService';
 
 @Component({
   selector: 'app-navbar',
@@ -7,11 +8,14 @@ import {  Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
-  constructor(private router: Router){}
+  constructor(private router: Router, private servInst: ObserverServiceService){}
+  showOnSubjectPage:boolean = false;
   pageOpened:any = window.location.pathname;
   ngOnInit(): void {    
     console.log("pageOpened", this.pageOpened);
-    
+    this.servInst.custSubjectBadge.subscribe(res => {
+      this.showOnSubjectPage = res
+    })
     if(this.pageOpened == "/learning"){
       this.active1 = true
     } else {

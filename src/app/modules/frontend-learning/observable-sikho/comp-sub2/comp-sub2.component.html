@@ -1,0 +1,7 @@
+<div class="card text-white bg-dark" >
+    <div class="card-body">
+        <label for="testSearch" class="form-label">Output - <b class="text-warning"> {{enteredString}}</b></label>
+        <input type="text" class="form-control" placeholder="type something" #stringInp >
+        <button type="button" class="btn btn-secondary mt-2" (click)="updateSubject(stringInp)">Change Everywhere</button>
+    </div>
+</div>

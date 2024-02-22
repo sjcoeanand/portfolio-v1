@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { fromEvent, interval, range, timer } from 'rxjs';
 import { take, takeLast, takeUntil, toArray} from 'rxjs/operators';
-import { ObserverServiceService } from 'src/app/services/observer-service.service';
+import { ObserverServiceService } from 'src/app/services/ObserverServiceService';
 
 @Component({
   selector: 'app-take-obs',

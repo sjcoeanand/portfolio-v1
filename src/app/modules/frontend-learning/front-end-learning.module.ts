@@ -16,7 +16,13 @@ import { TapComponent } from './observable-sikho/tap/tap.component';
 import { TakeObsComponent } from './observable-sikho/take-obs/take-obs.component';
 import { RetryScanComponent } from './observable-sikho/retry-scan/retry-scan.component';
 import { ScanComponent } from './observable-sikho/scan/scan.component';
-
+import { DebounceTimeComponent } from './observable-sikho/debounce-time/debounce-time.component';
+import { SubjectBehaviourComponent } from './observable-sikho/subject-behaviour/subject-behaviour.component';
+import { CompSub1Component } from './observable-sikho/comp-sub1/comp-sub1.component';
+import { CompSub2Component } from './observable-sikho/comp-sub2/comp-sub2.component';
+import { CompSub3Component } from './observable-sikho/comp-sub3/comp-sub3.component';
+import { StringLimitPipe } from 'src/app/pipes/string-limit.pipe';
+import { ReplaySubjectComponent } from './observable-sikho/replay-subject/replay-subject.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +38,13 @@ import { ScanComponent } from './observable-sikho/scan/scan.component';
     TapComponent,
     TakeObsComponent,
     RetryScanComponent,
-    ScanComponent
+    ScanComponent,
+    DebounceTimeComponent,
+    SubjectBehaviourComponent,
+    CompSub1Component,
+    CompSub2Component,
+    CompSub3Component,    
+    StringLimitPipe, ReplaySubjectComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,22 @@
+<div class="d-flex justify-content-between my-4">
+    <h3>Subject & BehaviourSubject</h3> <div><button type="button" class="btn btn-primary btn-sm" (click)="redirectToObservable()">Back to Observable List</button></div>
+</div>
+<div>
+    <p><b>Subject - </b> A Subject is like an Observable, but can multicast to many Observers. 
+        Subjects are like EventEmitters: they maintain a registry of many listeners.</p>
+    <p><b>BehaviourSubject - </b> Same like Subject but it has initial value</p>
+</div>
+<div class="d-inline-block mb-4 text-warning border border-warning p-2 rounded">
+    <div class="fw-bold">{{dynamicTitle}}</div>
+</div>
+<div class="row">
+    <div class="col-md-4 mb-2">
+       <app-comp-sub1></app-comp-sub1>
+    </div>
+    <div class="col-md-4 mb-2">
+        <app-comp-sub2></app-comp-sub2>
+     </div>
+     <div class="col-md-4 mb-2">
+        <app-comp-sub3></app-comp-sub3>
+     </div>
+</div>

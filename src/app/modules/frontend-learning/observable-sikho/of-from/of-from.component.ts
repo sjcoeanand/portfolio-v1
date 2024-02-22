@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Subscription, from, of } from 'rxjs';
-import { ObserverServiceService } from 'src/app/services/observer-service.service';
+import { ObserverServiceService } from 'src/app/services/ObserverServiceService';
 
 @Component({
   selector: 'app-of-from',

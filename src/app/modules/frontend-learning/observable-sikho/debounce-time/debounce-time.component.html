@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-between my-4">
+    <h3>Debounce & DistinctUntilChanged</h3> <div><button type="button" class="btn btn-primary btn-sm" (click)="redirectToObservable()">Back to Observable List</button></div>
+</div>
+<div class="row">
+    <div class="col-md-5 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <label for="testSearch" class="form-label">1 - <b class="text-warning"> DebounceTime</b></label>
+                <p>
+                    Debounce time will hold the event change for given time and it will fire the event for all the changes
+                </p>
+                <br>
+                <input type="text" class="form-control"  placeholder="type something" #debncInput1>        
+                <div *ngIf="transformedData != null" class="output">{{transformedData}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-5 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <label for="testSearch" class="form-label">2 - <b class="text-warning"> DistinctUntilChanged</b></label>
+                <p>DistinctUntillChanged with debounce time will fire the event after given interval also it will not fire the event if given inpuch is same as previous</p>
+                <input type="text" class="form-control"  placeholder="type something" #debncInput2>              
+                <div *ngIf="transformedData1 != null" class="output">{{transformedData1}}</div>              
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,4 @@
+import { DebounceTimeComponent } from './observable-sikho/debounce-time/debounce-time.component';
 import { CustomObservableComponent } from './observable-sikho/custom-observable/custom-observable.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -14,6 +15,9 @@ import { TapComponent } from './observable-sikho/tap/tap.component';
 import { TakeObsComponent } from './observable-sikho/take-obs/take-obs.component';
 import { RetryScanComponent } from './observable-sikho/retry-scan/retry-scan.component';
 import { ScanComponent } from './observable-sikho/scan/scan.component';
+import { debounceTime } from 'rxjs';
+import { SubjectBehaviourComponent } from './observable-sikho/subject-behaviour/subject-behaviour.component';
+import { ReplaySubjectComponent } from './observable-sikho/replay-subject/replay-subject.component';
 
 const routes: Routes = [
   {
@@ -71,6 +75,18 @@ const routes: Routes = [
       {
         path : 'scan-obs',
         component : ScanComponent
+      },
+      {
+        path : 'debounce-time',
+        component : DebounceTimeComponent
+      },
+      {
+        path : 'subject-bsub',
+        component : SubjectBehaviourComponent
+      },
+      {
+        path : 'replay-subject',
+        component : ReplaySubjectComponent
       }
     ]
   }

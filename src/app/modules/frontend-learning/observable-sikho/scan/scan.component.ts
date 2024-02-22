@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { of, scan } from 'rxjs';
-import { ObserverServiceService } from 'src/app/services/observer-service.service';
+import { ObserverServiceService } from 'src/app/services/ObserverServiceService';
 
 @Component({
   selector: 'app-scan',

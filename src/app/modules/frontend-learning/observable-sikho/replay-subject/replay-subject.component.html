@@ -1,0 +1,56 @@
+<div class="d-flex justify-content-between my-4">
+    <h3>RpelaySubject</h3> <div><button type="button" class="btn btn-primary btn-sm" (click)="redirectToObservable()">Back to Observable List</button></div>
+</div>
+<div class="mb-2">
+    A variant of Subject that "replays" old values to new subscribers by emitting them when they first subscribe.(Only emits latest values as per given buffer count)
+</div>
+<div class="tweets mb-4">
+    <div class="card text-white bg-dark" >
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-5">
+                    <label for="testSearch" class="form-label text-warning">Elon's Tweet</label>
+                    <input type="text" class="form-control  mb-2" #stringInp>
+                </div>
+                <div class="align-self-end col-md-2 mb-2">
+                    <button type="button" class="btn btn-secondary" (click)="addTweet(stringInp)">Add Tweet</button>
+                </div>
+                <div class="align-self-end ms-2 border border-warning p-2 col-md-4">
+                    Syntax - <b class=" text-warning"> customReplaySubject = new ReplaySubject(2)</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <label for="testSearch" class="form-label text-warning">Tweets by Elon Musk</label>
+                <div class="border border-warning rounded px-2 py-1 mb-1" *ngFor="let item of tweetsByElon">{{item}}</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <label for="testSearch" class="form-label text-warning">X User 1</label>
+                <div class="border border-warning rounded px-2 py-1 mb-1" *ngFor="let item of tweetsbyElonforUser1">{{item}}</div>
+                <div class="mt-2">                    
+                    <button type="button" class="btn" [ngClass]="subscribeStatus1 ? 'btn-danger' : 'btn-success'" (click)="subUnSubscribe1()">{{subscribeStatus1 ? 'Unsubscribe' : 'Subscribe'}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <label for="testSearch" class="form-label text-warning">X User 2</label>
+                <div class="border border-warning rounded px-2 py-1 mb-1" *ngFor="let item of tweetsbyElonforUser2">{{item}}</div>
+                <div class="mt-2">
+                    <button type="button" class="btn" [ngClass]="subscribeStatus2 ? 'btn-danger' : 'btn-success'" (click)="subUnSubscribe2()">{{subscribeStatus2 ? 'Unsubscribe' : 'Subscribe'}}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
