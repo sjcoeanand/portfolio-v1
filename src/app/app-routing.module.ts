@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './modules/landing-page/landing-page.component';
+import { ObserverServiceService } from './services/ObserverServiceService';
 const routes: Routes = [
   {
     path : '',

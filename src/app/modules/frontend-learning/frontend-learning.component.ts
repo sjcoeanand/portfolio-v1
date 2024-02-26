@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
+import { ObserverServiceService } from 'src/app/services/ObserverServiceService';
 
 
 @Component({
@@ -10,18 +11,16 @@ import { Observable, Subscription } from 'rxjs';
 export class FrontendLearningComponent {
   
   accordionClicked:boolean = false;
-  url: string = '/assets/dataSource/learning-data.json';
   learningData:any;
   pageOpened:any = window.location.pathname;
   accordionHeading:any; 
   private mySubscription!:Subscription;
   tablist:any[] = ['JavaScript', 'RxJs', 'DSA'];
 
+  constructor(private servInst : ObserverServiceService){}
   ngOnInit(): void {
     
-    fetch(this.url)
-    .then(res => res.json())
-    .then(resp => { 
+    this.servInst.fetchFrontendData().subscribe((resp)=>{
       this.learningData = resp.map((x:any) =>{
         if(x.name == 'Promises') {
          x['code'] = this.testPromiseData
@@ -56,8 +55,7 @@ export class FrontendLearningComponent {
         return x
       });    
       this.selectedTab('JavaScript')
-    }); 
-    
+    })
       
     // this is done for toast notification of learning page landing
     this.accordionClicked = true;
