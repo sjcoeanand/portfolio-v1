@@ -83,6 +83,11 @@
                     <button type="button" routerLink="observable-sikho" class="btn btn-warning btn-sm my-2">Learn More About Observables</button>
                   </div>
                   <!-- observable practical sikho (-) -->
+                  <!-- resovle route (+) -->
+                  <div *ngIf="item.name == 'Resolve Route Angular'">
+                    <button type="button" routerLink="resolve-route" class="btn btn-primary btn-sm">Redirect to Component with data from server</button>
+                  </div>
+                  <!-- resovle route (-) -->
                   <div class="titleInParagraph">{{item.code ? 'Sample Syntax' : ''}}</div>
                   <pre class="code-section">{{item.code}}</pre>
                 </div>

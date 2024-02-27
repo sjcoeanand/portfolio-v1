@@ -23,6 +23,8 @@ import { CompSub2Component } from './observable-sikho/comp-sub2/comp-sub2.compon
 import { CompSub3Component } from './observable-sikho/comp-sub3/comp-sub3.component';
 import { StringLimitPipe } from 'src/app/pipes/string-limit.pipe';
 import { ReplaySubjectComponent } from './observable-sikho/replay-subject/replay-subject.component';
+import { ForkJoinComponent } from './observable-sikho/fork-join/fork-join.component';
+import { RouteResolveComponent } from './sample-dummy-components/route-resolve/route-resolve.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,7 @@ import { ReplaySubjectComponent } from './observable-sikho/replay-subject/replay
     CompSub1Component,
     CompSub2Component,
     CompSub3Component,    
-    StringLimitPipe, ReplaySubjectComponent
+    StringLimitPipe, ReplaySubjectComponent, ForkJoinComponent, RouteResolveComponent
   ],
   imports: [
     CommonModule,

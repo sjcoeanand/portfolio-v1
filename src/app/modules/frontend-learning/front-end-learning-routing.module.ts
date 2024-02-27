@@ -1,7 +1,7 @@
 import { DebounceTimeComponent } from './observable-sikho/debounce-time/debounce-time.component';
 import { CustomObservableComponent } from './observable-sikho/custom-observable/custom-observable.component';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Inject, NgModule } from '@angular/core';
+import { ActivatedRouteSnapshot, ResolveFn, RouterModule, RouterStateSnapshot, Routes } from '@angular/router';
 import { FrontendLearningComponent } from './frontend-learning.component';
 import { AsyncAwaitComponent } from './async-await/async-await.component';
 import { ObservableSikhoComponent } from './observable-sikho/observable-sikho.component';
@@ -17,11 +17,20 @@ import { RetryScanComponent } from './observable-sikho/retry-scan/retry-scan.com
 import { ScanComponent } from './observable-sikho/scan/scan.component';
 import { SubjectBehaviourComponent } from './observable-sikho/subject-behaviour/subject-behaviour.component';
 import { ReplaySubjectComponent } from './observable-sikho/replay-subject/replay-subject.component';
+import { ForkJoinComponent } from './observable-sikho/fork-join/fork-join.component';
+import { RouteResolveComponent } from './sample-dummy-components/route-resolve/route-resolve.component';
+import {  addEditClietResolver } from 'src/app/services/authguard.service';
+
 
 const routes: Routes = [
   {
     path : '',
-    component : FrontendLearningComponent
+    component : FrontendLearningComponent,
+  },
+  {
+    path : 'resolve-route',
+    component : RouteResolveComponent,
+    resolve : {photoList : addEditClietResolver}
   },
   {
     path : 'async-await',
@@ -86,6 +95,10 @@ const routes: Routes = [
       {
         path : 'replay-subject',
         component : ReplaySubjectComponent
+      },
+      {
+        path : 'fork-join',
+        component : ForkJoinComponent
       }
     ]
   }

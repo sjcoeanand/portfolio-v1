@@ -15,7 +15,7 @@ export class FrontendLearningComponent {
   pageOpened:any = window.location.pathname;
   accordionHeading:any; 
   private mySubscription!:Subscription;
-  tablist:any[] = ['JavaScript', 'RxJs', 'DSA'];
+  tablist:any[] = ['JavaScript', 'RxJs', 'DSA', 'Angular'];
 
   constructor(private servInst : ObserverServiceService){}
   ngOnInit(): void {

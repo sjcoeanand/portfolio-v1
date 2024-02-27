@@ -63,4 +63,12 @@
     "name" :   "Best Time to Buy and Sell Stock",
     "tag": "DSA",
     "description" : "You are given an array prices where prices[i] is the price of a given stock on the ith day.You want to maximize your profit by choosing a single day to buy one stock and choosing a different day in the future to sell that stock.Return the maximum profit you can achieve from this transaction. If you cannot achieve any profit, return 0"
-    }]
+},
+{
+    "id" : 41,
+    "name" : "Resolve Route Angular",
+    "tag" : "Angular",
+    "description" : "The Angular Resolve route guard or Angular Resolvers allow us to load some data before we navigate to a Route. The Resolve route guard pre fetches the data before navigating to the route. Hence the component is rendered along with the data"
+
+}   
+]

@@ -1,4 +1,9 @@
 <app-navbar></app-navbar>
 <div class="pt-5">
     <router-outlet ></router-outlet>
+    <div class="text-center mt-5" *ngIf="showLoader">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
 </div>

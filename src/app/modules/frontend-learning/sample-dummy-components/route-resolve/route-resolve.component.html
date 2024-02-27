@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <div class="d-flex justify-content-between my-2">
+      <h3>Resolve Route</h3>
+      <div>
+        <button type="button"  class="btn btn-primary btn-sm" (click)="redirectToLearning()">Back to Learning</button>
+      </div>
+    </div>
+    <div class="dummy-data">
+        <div class="row row-cols-4 row-cols-md-4 g-4">
+            <div class="col" *ngFor="let item of responseData;">
+              <div class="card">
+                <img src="https://via.placeholder.com/150/92c952" class="card-img-top w-25" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{item.title}}</h5>
+                 </div>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>

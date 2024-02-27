@@ -60,6 +60,10 @@ export class TopicListComponent {
     {
       name : 'Replay Subject',
       routerLinkPath : 'replay-subject'
+    },
+    {
+      name : 'Fork Join',
+      routerLinkPath : 'fork-join'
     }
 ]
   redirectToLearning(){
