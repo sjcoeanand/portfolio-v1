@@ -84,6 +84,10 @@ export class TopicListComponent {
     {
       name : 'ConcatMap',
       routerLinkPath : 'cancat-map-obs'
+    },
+    {
+      name : 'switchMap',
+      routerLinkPath : 'switch-map'
     }
 ]
   redirectToLearning(){

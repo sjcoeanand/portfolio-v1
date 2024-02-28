@@ -1,7 +1,8 @@
+import { MobileNotificationComponent } from './sample-dummy-components/mobile-notification/mobile-notification.component';
 import { DebounceTimeComponent } from './observable-sikho/debounce-time/debounce-time.component';
 import { CustomObservableComponent } from './observable-sikho/custom-observable/custom-observable.component';
-import { Inject, NgModule } from '@angular/core';
-import { ActivatedRouteSnapshot, ResolveFn, RouterModule, RouterStateSnapshot, Routes } from '@angular/router';
+import {  NgModule } from '@angular/core';
+import {  RouterModule,  Routes } from '@angular/router';
 import { FrontendLearningComponent } from './frontend-learning.component';
 import { AsyncAwaitComponent } from './async-await/async-await.component';
 import { ObservableSikhoComponent } from './observable-sikho/observable-sikho.component';
@@ -25,6 +26,7 @@ import { ConcatComponent } from './observable-sikho/concat/concat.component';
 import { MergeComponent } from './observable-sikho/merge/merge.component';
 import { MergeMapComponent } from './observable-sikho/merge-map/merge-map.component';
 import { ConcatMapComponent } from './observable-sikho/concat-map/concat-map.component';
+import { SwitchMapComponent } from './observable-sikho/switch-map/switch-map.component';
 
 
 const routes: Routes = [
@@ -36,6 +38,10 @@ const routes: Routes = [
     path : 'resolve-route',
     component : RouteResolveComponent,
     resolve : {photoList : addEditClietResolver}
+  },
+  {
+    path : 'mobile-notifications',
+    component : MobileNotificationComponent,
   },
   {
     path : 'async-await',
@@ -124,6 +130,10 @@ const routes: Routes = [
       {
         path : 'cancat-map-obs',
         component : ConcatMapComponent
+      },
+      {
+        path : 'switch-map',
+        component : SwitchMapComponent
       }
     ]
   }

@@ -20,6 +20,7 @@ export class ObserverServiceService {
 
   printRoudedDivs(val: any, containerId: string) {
     let el = document.createElement('div');
+    el.setAttribute('class', 'notification')
     el.innerText = val;
     document.getElementById(containerId)?.appendChild(el) as HTMLElement;
   }
