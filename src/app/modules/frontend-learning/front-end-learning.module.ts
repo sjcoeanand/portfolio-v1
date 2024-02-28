@@ -25,6 +25,11 @@ import { StringLimitPipe } from 'src/app/pipes/string-limit.pipe';
 import { ReplaySubjectComponent } from './observable-sikho/replay-subject/replay-subject.component';
 import { ForkJoinComponent } from './observable-sikho/fork-join/fork-join.component';
 import { RouteResolveComponent } from './sample-dummy-components/route-resolve/route-resolve.component';
+import { AsyncSubjectComponent } from './observable-sikho/async-subject/async-subject.component';
+import { ConcatComponent } from './observable-sikho/concat/concat.component';
+import { MergeComponent } from './observable-sikho/merge/merge.component';
+import { MergeMapComponent } from './observable-sikho/merge-map/merge-map.component';
+import { ConcatMapComponent } from './observable-sikho/concat-map/concat-map.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +51,7 @@ import { RouteResolveComponent } from './sample-dummy-components/route-resolve/r
     CompSub1Component,
     CompSub2Component,
     CompSub3Component,    
-    StringLimitPipe, ReplaySubjectComponent, ForkJoinComponent, RouteResolveComponent
+    StringLimitPipe, ReplaySubjectComponent, ForkJoinComponent, RouteResolveComponent, AsyncSubjectComponent, ConcatComponent, MergeComponent, MergeMapComponent, ConcatMapComponent
   ],
   imports: [
     CommonModule,

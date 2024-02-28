@@ -1,0 +1,53 @@
+<div class="d-flex justify-content-between my-4">
+    <h3>Concat Map</h3> <div><button type="button" class="btn btn-primary btn-sm" (click)="redirectToObservable()">Back to Observable List</button></div>
+</div>
+<div class="mb-2">
+    concatMap operator is used to subscribe returned observables, so instead of using map and concalAll() we can directly use concatMap()</div>
+
+<div class="row">
+    <div class="col-md-4 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Example - (Using Map)</h6>  
+                <p class="border border-2 px-2"><b>Videos = </b>['Java', 'Node', 'dotNet']</p>   
+                <div class="mt-3">
+                    <b>Output Stream:</b> 
+                    <div>
+                        <ul class="mb-0" id="obsConcat1">
+                        </ul>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Example - (Using mergeMap)</h6>    
+                <p class="border border-2 px-2"><b>Videos = </b>['Java', 'Node', 'dotNet']</p>  
+                <div class="mt-3">
+                    <b>Output Stream:</b> 
+                    <div>
+                        <ul class="mb-0" id="obsConcat2">
+                        </ul>
+                    </div>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Example - (concatMap)</h6>    
+                <p class="border border-2 px-2"><b>Videos = </b>['Java', 'Node', 'dotNet']</p>  
+                <div class="mt-3">
+                    <b>Output Stream:</b> 
+                    <div>
+                        <ul class="mb-0" id="obsConcat3">
+                        </ul>
+                    </div>
+                </div>             
+            </div>
+        </div>
+    </div>
+</div>

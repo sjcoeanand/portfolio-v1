@@ -20,6 +20,11 @@ import { ReplaySubjectComponent } from './observable-sikho/replay-subject/replay
 import { ForkJoinComponent } from './observable-sikho/fork-join/fork-join.component';
 import { RouteResolveComponent } from './sample-dummy-components/route-resolve/route-resolve.component';
 import {  addEditClietResolver } from 'src/app/services/authguard.service';
+import { AsyncSubjectComponent } from './observable-sikho/async-subject/async-subject.component';
+import { ConcatComponent } from './observable-sikho/concat/concat.component';
+import { MergeComponent } from './observable-sikho/merge/merge.component';
+import { MergeMapComponent } from './observable-sikho/merge-map/merge-map.component';
+import { ConcatMapComponent } from './observable-sikho/concat-map/concat-map.component';
 
 
 const routes: Routes = [
@@ -99,6 +104,26 @@ const routes: Routes = [
       {
         path : 'fork-join',
         component : ForkJoinComponent
+      },
+      {
+        path : 'async-subject',
+        component : AsyncSubjectComponent
+      },
+      {
+        path : 'concat-obs',
+        component : ConcatComponent
+      },
+      {
+        path : 'merge-obs',
+        component : MergeComponent
+      },
+      {
+        path : 'merge-map-obs',
+        component : MergeMapComponent
+      },
+      {
+        path : 'cancat-map-obs',
+        component : ConcatMapComponent
       }
     ]
   }

@@ -12,7 +12,6 @@ export class NavbarComponent {
   showOnSubjectPage:boolean = false;
   pageOpened:any = window.location.pathname;
   ngOnInit(): void {    
-    console.log("pageOpened", this.pageOpened);
     this.servInst.custSubjectBadge.subscribe(res => {
       this.showOnSubjectPage = res
     })

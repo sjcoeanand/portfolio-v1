@@ -1,0 +1,75 @@
+<div class="d-flex justify-content-between my-4">
+    <h3>Merge</h3> <div><button type="button" class="btn btn-primary btn-sm" (click)="redirectToObservable()">Back to Observable List</button></div>
+</div>
+<div class="mb-2">
+    The merge operator is useful when you have multiple observables that produce values independently and you want to combine their output into a single stream.  
+</div>
+
+<div class="row">
+    <div class="col-md-4 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Observable 1 (1 Second)</h6>     
+                <div class="mt-3">
+                    <b>Output :</b> 
+                    <div>
+                        <ul class="mb-0 stream-data horizontal">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Observable 2 (2 Second)</h6>  
+                <div class="mt-3">
+                    <b>Output :</b> 
+                    <div>
+                        <ul class="mb-0 stream-data horizontal">
+                            <li>11</li>
+                            <li>12</li>
+                            <li>13</li>
+                        </ul>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-2">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Observable 3 (3 Second)</h6>  
+                <div class="mt-3">
+                    <b>Output :</b> 
+                    <div>
+                        <ul class="mb-0 stream-data horizontal">
+                            <li>21</li>
+                            <li>22</li>
+                        </ul>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-center">
+    <div class="col-md-6 mb-2 ">
+        <div class="card text-white bg-dark" >
+            <div class="card-body">
+                <h6 class="card-title text-warning">Concated Data</h6>     
+                <div class="mt-3">
+                    <b>Output :</b> 
+                    <div>
+                        <ul id="custConcatId" class="mb-0 stream-data horizontal"></ul> 
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </div>
+</div>

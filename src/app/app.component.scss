@@ -1,4 +1,10 @@
 ::ng-deep .stream-data{
+    &.horizontal{
+        display: flex;
+        li {
+            margin-right: 4px;
+        }
+    }
     li{
         list-style: none !important;
         width: 30px;

@@ -64,6 +64,26 @@ export class TopicListComponent {
     {
       name : 'Fork Join',
       routerLinkPath : 'fork-join'
+    },
+    {
+      name : 'Async Subject',
+      routerLinkPath : 'async-subject'
+    },
+    {
+      name : 'Concat',
+      routerLinkPath : 'concat-obs'
+    },
+    {
+      name : 'Merge',
+      routerLinkPath : 'merge-obs'
+    },
+    {
+      name : 'MergeMap',
+      routerLinkPath : 'merge-map-obs'
+    },
+    {
+      name : 'ConcatMap',
+      routerLinkPath : 'cancat-map-obs'
     }
 ]
   redirectToLearning(){

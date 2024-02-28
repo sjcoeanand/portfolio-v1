@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
-import { Observable, ReplaySubject, Subject, delay, of } from 'rxjs';
+import { AsyncSubject, Observable, ReplaySubject, Subject, delay, of } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,6 +17,12 @@ export class ObserverServiceService {
   }
   // creatting list for ul common method (-)
 
+
+  printRoudedDivs(val: any, containerId: string) {
+    let el = document.createElement('div');
+    el.innerText = val;
+    document.getElementById(containerId)?.appendChild(el) as HTMLElement;
+  }
   // subject and behaviour subject (+)
   custSubjectBadge = new Subject<boolean>();
   custSubjectOutput = new Subject();
@@ -28,6 +34,10 @@ export class ObserverServiceService {
   // Replay Subject (+)
   customReplaySubject = new ReplaySubject(2)
   // Replay Subject (-)
+
+  // asynch Subject (+)
+  customAsyncSubject = new AsyncSubject()
+  // asynch Subject (-)
 
   fetchFrontendData(){
     return this.httpClient.get<any[]>(this.url);
