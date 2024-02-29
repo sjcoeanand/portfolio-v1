@@ -52,6 +52,9 @@ export class FrontendLearningComponent {
         if(x.name == 'Best Time to Buy and Sell Stock'){
           x['code'] = this.testBestTimeTobuyStock
         }
+        if(x.name == 'Find Single missing number from given numbers in array'){
+          x['code'] = this.testMissingSingleNumberFromArray
+        }
         return x
       });    
       this.selectedTab('JavaScript')
@@ -344,4 +347,22 @@ obs1.subscribe(data => console.log(data))
   maxProfit =  5
   maxProfit =  0
   `
+
+  testMissingSingleNumberFromArray = `
+  function missingArrayItem(sampleArray){
+    let n = sampleArray.length + 1;
+
+    // main formula
+    let sumOffFirstN = (n*(n+1))/2;
+
+    let sumOfArray = 0;
+    for(let i=0; i<n-1; i++){
+      sumOfArray = sumOfArray + sampleArray[i]
+    }
+    let result = sumOffFirstN - sumOfArray
+    return result
+  }
+  missingArrayItem([2,5,6,1,3])
+  // output : 4
+  `;
 }

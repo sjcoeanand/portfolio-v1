@@ -70,5 +70,12 @@
     "tag" : "Angular",
     "description" : "The Angular Resolve route guard or Angular Resolvers allow us to load some data before we navigate to a Route. The Resolve route guard pre fetches the data before navigating to the route. Hence the component is rendered along with the data"
 
+},
+{
+    "id" : 38,
+    "name" : "Find Single missing number from given numbers in array",
+    "tag" : "DSA",
+    "description" : "This method will return missing value from array if only single number is missing from given sequence in array of elements. use formula l1 = arr.length, summOfFirstN = (l1 * (l1+1))/2, and then subtract it from some of array elements"
+
 }   
 ]
