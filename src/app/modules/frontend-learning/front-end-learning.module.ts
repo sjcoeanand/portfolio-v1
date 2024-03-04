@@ -30,7 +30,6 @@ import { ConcatComponent } from './observable-sikho/concat/concat.component';
 import { MergeComponent } from './observable-sikho/merge/merge.component';
 import { MergeMapComponent } from './observable-sikho/merge-map/merge-map.component';
 import { ConcatMapComponent } from './observable-sikho/concat-map/concat-map.component';
-import { MobileNotificationComponent } from './sample-dummy-components/mobile-notification/mobile-notification.component';
 import { SwitchMapComponent } from './observable-sikho/switch-map/switch-map.component';
 
 @NgModule({
@@ -53,7 +52,7 @@ import { SwitchMapComponent } from './observable-sikho/switch-map/switch-map.com
     CompSub1Component,
     CompSub2Component,
     CompSub3Component,    
-    StringLimitPipe, ReplaySubjectComponent, ForkJoinComponent, RouteResolveComponent, AsyncSubjectComponent, ConcatComponent, MergeComponent, MergeMapComponent, ConcatMapComponent,  MobileNotificationComponent, SwitchMapComponent
+    StringLimitPipe, ReplaySubjectComponent, ForkJoinComponent, RouteResolveComponent, AsyncSubjectComponent, ConcatComponent, MergeComponent, MergeMapComponent, ConcatMapComponent, SwitchMapComponent
   ],
   imports: [
     CommonModule,

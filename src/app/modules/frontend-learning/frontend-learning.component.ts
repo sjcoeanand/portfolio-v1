@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { Observable, Subscription } from 'rxjs';
+import { Component, ViewChild } from '@angular/core';
+import { FormGroup, NgForm } from '@angular/forms';
+import { Observable, Subscription, map, debounceTime, distinctUntilChanged, switchMap, filter, tap } from 'rxjs';
 import { ObserverServiceService } from 'src/app/services/ObserverServiceService';
+import { SearchDataService } from 'src/app/services/search-data.service';
 
 
 @Component({
@@ -17,7 +19,7 @@ export class FrontendLearningComponent {
   private mySubscription!:Subscription;
   tablist:any[] = ['JavaScript', 'RxJs', 'DSA', 'Angular'];
 
-  constructor(private servInst : ObserverServiceService){}
+  constructor(private servInst : ObserverServiceService, private searchService: SearchDataService){}
   ngOnInit(): void {
     
     this.servInst.fetchFrontendData().subscribe((resp)=>{
@@ -66,7 +68,7 @@ export class FrontendLearningComponent {
       this.accordionClicked = false;
     }, 2000);
 
-
+    this.filterData = [];
   }
 
   ngOnDestroy(): void {
@@ -365,4 +367,31 @@ obs1.subscribe(data => console.log(data))
   missingArrayItem([2,5,6,1,3])
   // output : 4
   `;
+
+
+
+  // search feature (+)
+  showSearch:boolean = false;
+  @ViewChild('searchForm') searchForm !: NgForm;
+  rawData:any;
+  filterData:any;
+  ngAfterViewInit() {
+    this.filterData = [];
+    
+    let entredString = this.searchForm?.valueChanges;   
+    
+    entredString?.pipe(      
+      map(res => res.searchInput1),
+      debounceTime(500),
+      distinctUntilChanged(),
+      switchMap(data =>  this.searchService.fetchSearchData(data))
+    ).subscribe((res1:any)=>{
+      if(res1.length == 20){
+        this.filterData = []
+      } else {
+        this.filterData = res1;
+      }
+    });
+  }
+  // search feature (-)
 }

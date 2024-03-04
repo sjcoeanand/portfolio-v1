@@ -1,4 +1,3 @@
-import { MobileNotificationComponent } from './sample-dummy-components/mobile-notification/mobile-notification.component';
 import { DebounceTimeComponent } from './observable-sikho/debounce-time/debounce-time.component';
 import { CustomObservableComponent } from './observable-sikho/custom-observable/custom-observable.component';
 import {  NgModule } from '@angular/core';
@@ -38,10 +37,6 @@ const routes: Routes = [
     path : 'resolve-route',
     component : RouteResolveComponent,
     resolve : {photoList : addEditClietResolver}
-  },
-  {
-    path : 'mobile-notifications',
-    component : MobileNotificationComponent,
   },
   {
     path : 'async-await',

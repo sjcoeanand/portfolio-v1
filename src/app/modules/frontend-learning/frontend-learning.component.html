@@ -80,7 +80,7 @@
                   <!-- async await (-) -->
                   <!-- observable practical sikho (+) -->
                   <div *ngIf="item.name == 'Observables'">
-                    <button type="button" routerLink="observable-sikho" class="btn btn-warning btn-sm my-2">Learn More About Observables</button>
+                    <button type="button" routerLink="observable-sikho" class="btn btn-warning btn-sm my-2 fw-bold">View RxJs Operators</button>
                   </div>
                   <!-- observable practical sikho (-) -->
                   <!-- resovle route (+) -->
@@ -110,5 +110,43 @@
                 You are on learning page
            </div>
         </div>
+    </div>
+
+
+    <!-- SWITCHMAP SEARCH FEATURE -->
+    <div class="search-feature mt-4">
+      <div class="row">
+        <div class="col-md-12">
+          <h5>Search for Learning Topics</h5>
+          <form #searchForm="ngForm">
+            <div class="form-group">
+              <input type="text" autocomplete="off" class="form-control w-50" 
+                ngModel name="searchInput1" required >
+            </div>
+          </form>
+        </div>
+        <div class="col-md-12 mt-4">
+          <div class="text-right">{{filterData.length }} - Result Found</div>
+          <table class="table table-dark">
+              <caption>Searched records using switch map</caption>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Data</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr  *ngFor="let item of filterData; let i = index">
+                  <th scope="row">{{i+1}}</th>
+                  <td>
+                    <div class="highlight">{{item.title}}</div>
+                    <div class="fw-5">{{item.description}}</div>
+                  </td>
+                </tr>
+                <tr *ngIf="filterData?.length == 0"><td colspan="2">No Result</td></tr>
+              </tbody>
+            </table>
+        </div>
+      </div>
     </div>
 </div>
