@@ -17,7 +17,7 @@ export class FrontendLearningComponent {
   pageOpened:any = window.location.pathname;
   accordionHeading:any; 
   private mySubscription!:Subscription;
-  tablist:any[] = ['JavaScript', 'RxJs', 'DSA', 'Angular'];
+  tablist:any[] = ['JavaScript', 'RxJs', 'DSA', 'Angular', 'switchMap'];
 
   constructor(private servInst : ObserverServiceService, private searchService: SearchDataService){}
   ngOnInit(): void {
@@ -372,15 +372,21 @@ obs1.subscribe(data => console.log(data))
 
   // search feature (+)
   showSearch:boolean = false;
-  @ViewChild('searchForm') searchForm !: NgForm;
+  @ViewChild('searchForm', {static: true}) searchForm !: NgForm;
   rawData:any;
   filterData:any;
+  loader:boolean = false;
+  searchInput1:any;
+  addsomething(s:any){
+    console.log("s ", s);
+    
+  }
   ngAfterViewInit() {
     this.filterData = [];
     
     let entredString = this.searchForm?.valueChanges;   
     
-    entredString?.pipe(      
+    entredString?.pipe(  
       map(res => res.searchInput1),
       debounceTime(500),
       distinctUntilChanged(),

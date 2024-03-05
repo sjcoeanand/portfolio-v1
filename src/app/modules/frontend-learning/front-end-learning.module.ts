@@ -11,7 +11,7 @@ import { OfFromComponent } from './observable-sikho/of-from/of-from.component';
 import { CustomObservableComponent } from './observable-sikho/custom-observable/custom-observable.component';
 import { MapComponent } from './observable-sikho/map/map.component';
 import { FilterComponent } from './observable-sikho/filter/filter.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TapComponent } from './observable-sikho/tap/tap.component';
 import { TakeObsComponent } from './observable-sikho/take-obs/take-obs.component';
 import { RetryScanComponent } from './observable-sikho/retry-scan/retry-scan.component';
@@ -31,6 +31,7 @@ import { MergeComponent } from './observable-sikho/merge/merge.component';
 import { MergeMapComponent } from './observable-sikho/merge-map/merge-map.component';
 import { ConcatMapComponent } from './observable-sikho/concat-map/concat-map.component';
 import { SwitchMapComponent } from './observable-sikho/switch-map/switch-map.component';
+import { ExhaustMapComponent } from './observable-sikho/exhaust-map/exhaust-map.component';
 
 @NgModule({
   declarations: [
@@ -52,11 +53,11 @@ import { SwitchMapComponent } from './observable-sikho/switch-map/switch-map.com
     CompSub1Component,
     CompSub2Component,
     CompSub3Component,    
-    StringLimitPipe, ReplaySubjectComponent, ForkJoinComponent, RouteResolveComponent, AsyncSubjectComponent, ConcatComponent, MergeComponent, MergeMapComponent, ConcatMapComponent, SwitchMapComponent
+    StringLimitPipe, ReplaySubjectComponent, ForkJoinComponent, RouteResolveComponent, AsyncSubjectComponent, ConcatComponent, MergeComponent, MergeMapComponent, ConcatMapComponent, SwitchMapComponent, ExhaustMapComponent
   ],
   imports: [
     CommonModule,
-    FrontEndLearningRoutingModule,FormsModule
+    FrontEndLearningRoutingModule,FormsModule,ReactiveFormsModule
   ]
 })
 export class FrontEndLearningModule { }

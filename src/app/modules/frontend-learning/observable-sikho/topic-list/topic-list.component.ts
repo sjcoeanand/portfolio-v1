@@ -88,6 +88,10 @@ export class TopicListComponent {
     {
       name : 'switchMap',
       routerLinkPath : 'switch-map'
+    },
+    {
+      name : 'exhaustMap',
+      routerLinkPath : 'exhaust-map'
     }
 ]
   redirectToLearning(){
