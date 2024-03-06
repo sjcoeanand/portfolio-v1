@@ -90,8 +90,8 @@ export class TopicListComponent {
       routerLinkPath : 'switch-map'
     },
     {
-      name : 'exhaustMap',
-      routerLinkPath : 'exhaust-map'
+      name : 'shareReplay',
+      routerLinkPath : 'share-replay'
     }
 ]
   redirectToLearning(){

@@ -26,6 +26,7 @@ import { MergeComponent } from './observable-sikho/merge/merge.component';
 import { MergeMapComponent } from './observable-sikho/merge-map/merge-map.component';
 import { ConcatMapComponent } from './observable-sikho/concat-map/concat-map.component';
 import { SwitchMapComponent } from './observable-sikho/switch-map/switch-map.component';
+import { ShareReplayComponent } from './observable-sikho/share-replay/share-replay.component';
 
 
 const routes: Routes = [
@@ -129,6 +130,10 @@ const routes: Routes = [
       {
         path : 'switch-map',
         component : SwitchMapComponent
+      },
+      {
+        path : 'share-replay',
+        component : ShareReplayComponent
       }
     ]
   }

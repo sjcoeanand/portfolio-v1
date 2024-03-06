@@ -31,7 +31,7 @@ import { MergeComponent } from './observable-sikho/merge/merge.component';
 import { MergeMapComponent } from './observable-sikho/merge-map/merge-map.component';
 import { ConcatMapComponent } from './observable-sikho/concat-map/concat-map.component';
 import { SwitchMapComponent } from './observable-sikho/switch-map/switch-map.component';
-import { ExhaustMapComponent } from './observable-sikho/exhaust-map/exhaust-map.component';
+import { ShareReplayComponent } from './observable-sikho/share-replay/share-replay.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +53,7 @@ import { ExhaustMapComponent } from './observable-sikho/exhaust-map/exhaust-map.
     CompSub1Component,
     CompSub2Component,
     CompSub3Component,    
-    StringLimitPipe, ReplaySubjectComponent, ForkJoinComponent, RouteResolveComponent, AsyncSubjectComponent, ConcatComponent, MergeComponent, MergeMapComponent, ConcatMapComponent, SwitchMapComponent, ExhaustMapComponent
+    StringLimitPipe, ReplaySubjectComponent, ForkJoinComponent, RouteResolveComponent, AsyncSubjectComponent, ConcatComponent, MergeComponent, MergeMapComponent, ConcatMapComponent, SwitchMapComponent, ShareReplayComponent,
   ],
   imports: [
     CommonModule,
