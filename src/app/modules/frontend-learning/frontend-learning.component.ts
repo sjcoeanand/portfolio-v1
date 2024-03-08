@@ -318,8 +318,7 @@ obs1.subscribe(data => console.log(data))
   anagramDestination:any;
   isAnagramResult:boolean = false;
   submit:boolean = false;
-  valueChanges(e:any){
-    console.log('e =?',e );    
+  valueChanges(e:any){   
     this.submit = false;
   }
   isAnagram(s:any, t:any){
@@ -400,4 +399,39 @@ obs1.subscribe(data => console.log(data))
     });
   }
   // search feature (-)
+
+  // int to roman (+)
+  integerNum !: number;
+  romanNumber:any;
+  changeToRoman(){
+    console.log("object integerNum", this.integerNum);
+    this.roRoman(this.integerNum)
+  }
+
+  roRoman = (nom:number) => {
+    const M = {
+      'M' : 1000,
+      'CM' : 900,
+      'D' : 500,
+      'CD' : 400,
+      'C' : 100,
+      'XC' : 90,
+      'L' : 50,        
+      'XL' : 40,        
+      'X' : 10,
+      'IX' : 9,
+      'V' : 5,
+      'IV' : 4,
+      'I' : 1
+  }
+    let res = '';
+    Object.entries(M).forEach(([k, v]) => {
+        res += k.repeat(Math.floor(nom/v));
+        nom %= v 
+    })
+    this.romanNumber = res;
+    return this.romanNumber
+}
+  // int to roman (-)
+
 }

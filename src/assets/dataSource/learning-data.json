@@ -77,11 +77,17 @@
     "tag" : "DSA",
     "description" : "This method will return missing value from array if only single number is missing from given sequence in array of elements. use formula l1 = arr.length, summOfFirstN = (l1 * (l1+1))/2, and then subtract it from some of array elements"
 
-} ,
+},
 {
     "id" : 39,
     "name" : "switchMap search functionality",
     "tag" : "switchMap",
     "description" : "Search functionlity with switchMap operator to find the data from api, which calls latest requested api and cancells the previous all calls to improve the performance of the app"
+},
+{
+    "id" : 39,
+    "name" : "Convert Numeric to Roman",
+    "tag" : "DSA",
+    "description" : "Convert number to Roman format"
 }   
 ]

@@ -88,6 +88,19 @@
                     <button type="button" routerLink="resolve-route" class="btn btn-primary btn-sm">Redirect to Component with data from server</button>
                   </div>
                   <!-- resovle route (-) -->
+                  <!-- integer to Roman (+)-->
+                  <div *ngIf="item.name == 'Convert Numeric to Roman'">
+                    <div class="row">
+                      <div class="col-md-2">
+                        <input type="text" [(ngModel)]="integerNum" placeholder="enter number" name="anagramSource">
+                      </div>
+                      <div class="col-md-3">
+                        <button type="button" class="btn btn-secondary btn-sm" (click)="changeToRoman()">Get Roman</button>
+                      </div>
+                    </div>
+                    <div *ngIf="romanNumber != null" class="fw-bold border p-1 my-2 d-inline-block">Roman : {{romanNumber}} </div>
+                  </div>
+                  <!-- anagram words or phrases (-)-->
                   <div class="titleInParagraph">{{item.code ? 'Sample Syntax' : ''}}</div>
                   <pre class="code-section">{{item.code}}</pre>
                 </div>
@@ -114,8 +127,7 @@
 
 
     <!-- SWITCHMAP SEARCH FEATURE -->
-    <button class="btn btn-primary mt-2" (click)="showSearch = !showSearch">Toggle</button>
-    <div class="search-feature mt-4" *ngIf="showSearch">
+    <div class="search-feature mt-4">
       <div class="row">
         <div class="col-md-12">
           <h5>Search for Learning Topics</h5>

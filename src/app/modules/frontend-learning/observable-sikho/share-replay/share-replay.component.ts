@@ -18,9 +18,15 @@ export class ShareReplayComponent {
   allProducts : Observable<any> = new Observable<any>
   mobileProducts : Observable<any>  = new Observable<any>;
   laptopProducts : Observable<any>  = new Observable<any>;
+  laptopmobileProducts : Observable<any>  = new Observable<any>;
   apiUrl = 'https://dummyjson.com/products';
+
+  
   ngOnInit(): void {
-    this.allProducts = this.httpClient.get(this.apiUrl).pipe(shareReplay());  
+    this.allProducts = this.httpClient.get(this.apiUrl).pipe(shareReplay());
+    this.laptopmobileProducts = this.allProducts.pipe(map(x=> x.products.filter((y1:any)=>{
+      return (y1.category == 'smartphones' || y1.category == 'laptops')
+    })));  
     
     this.mobileProducts = this.allProducts.pipe(map(x=> x.products.filter((x1:any) => {
       return x1.category == 'smartphones'
