@@ -434,4 +434,11 @@ obs1.subscribe(data => console.log(data))
 }
   // int to roman (-)
 
+
+  // change first string to capital(+)
+  capitalFirst:any;
+  getValueFirstChar(e:any){
+    console.log(e);    
+  }
+  // change first string to capital(-)
 }

@@ -101,6 +101,13 @@
                     <div *ngIf="romanNumber != null" class="fw-bold border p-1 my-2 d-inline-block">Roman : {{romanNumber}} </div>
                   </div>
                   <!-- anagram words or phrases (-)-->
+                  <div *ngIf="item.name == 'Change first letter to capitalize'">
+                    <div class="row">
+                      <div class="col-12">
+                        <input type="text" [(ngModel)]="capitalFirst" name="test" (ngModelChange)="getValueFirstChar($event)">
+                      </div>
+                    </div>
+                  </div>
                   <div class="titleInParagraph">{{item.code ? 'Sample Syntax' : ''}}</div>
                   <pre class="code-section">{{item.code}}</pre>
                 </div>

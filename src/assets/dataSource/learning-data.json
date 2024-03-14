@@ -89,5 +89,11 @@
     "name" : "Convert Numeric to Roman",
     "tag" : "DSA",
     "description" : "Convert number to Roman format"
-}   
+}  ,
+{
+    "id" : 14,
+    "name" : "Change first letter to capitalize",
+    "tag": "JavaScript",
+    "description" : "--"
+} 
 ]
