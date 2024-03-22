@@ -5,7 +5,7 @@ const routes: Routes = [
   {
     path : '',
     component : LandingPageComponent
-  },
+  },  
   {
     path : 'learning',
     loadChildren : () => import('./modules/frontend-learning/front-end-learning.module').then(r => r.FrontEndLearningModule),

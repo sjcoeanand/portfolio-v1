@@ -69,7 +69,12 @@
     "name" : "Resolve Route Angular",
     "tag" : "Angular",
     "description" : "The Angular Resolve route guard or Angular Resolvers allow us to load some data before we navigate to a Route. The Resolve route guard pre fetches the data before navigating to the route. Hence the component is rendered along with the data"
-
+},
+{
+    "id" : 42,
+    "name" : "Forms in Angular",
+    "tag" : "Angular",
+    "description" : "There are two type of forms in angular. 1) Template Driven forms 2) Reactive forms. Click to see more about forms with examples "
 },
 {
     "id" : 38,

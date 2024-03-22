@@ -88,6 +88,12 @@
                     <button type="button" routerLink="resolve-route" class="btn btn-primary btn-sm">Redirect to Component with data from server</button>
                   </div>
                   <!-- resovle route (-) -->
+                  <!-- angular forms (+)-->
+                  <div *ngIf="item.name == 'Forms in Angular'">
+                    <button type="button" routerLink="angular-forms" class="btn btn-primary btn-sm">Forms in Angular</button>
+                  </div>
+                  <!-- angular forms (-)-->
+
                   <!-- integer to Roman (+)-->
                   <div *ngIf="item.name == 'Convert Numeric to Roman'">
                     <div class="row">

@@ -15,7 +15,7 @@ import { StringLimitPipe } from './pipes/string-limit.pipe';
     AppComponent,
     LandingPageComponent,
     NavbarComponent,
-    FrontendLearningComponent
+    FrontendLearningComponent,
   ],
   imports: [
     BrowserModule,

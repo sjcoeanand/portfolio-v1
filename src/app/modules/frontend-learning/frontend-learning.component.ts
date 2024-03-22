@@ -59,9 +59,11 @@ export class FrontendLearningComponent {
         }
         return x
       });    
+      console.log('nbfore');
       this.selectedTab('JavaScript')
+      console.log('nafter');
     })
-      
+    
     // this is done for toast notification of learning page landing
     this.accordionClicked = true;
     setTimeout(() => {
