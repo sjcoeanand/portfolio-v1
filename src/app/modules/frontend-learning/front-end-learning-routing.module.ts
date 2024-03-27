@@ -27,6 +27,7 @@ import { MergeMapComponent } from './observable-sikho/merge-map/merge-map.compon
 import { ConcatMapComponent } from './observable-sikho/concat-map/concat-map.component';
 import { SwitchMapComponent } from './observable-sikho/switch-map/switch-map.component';
 import { ShareReplayComponent } from './observable-sikho/share-replay/share-replay.component';
+import { AuthenticationFormsComponent } from './angular-topics/authentication-forms/authentication-forms.component';
 
 
 const routes: Routes = [
@@ -136,6 +137,10 @@ const routes: Routes = [
         component : ShareReplayComponent
       }
     ]
+  },
+  {
+    path: 'login',
+    component : AuthenticationFormsComponent
   }
 ];
 

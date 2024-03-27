@@ -32,7 +32,7 @@ import { MergeMapComponent } from './observable-sikho/merge-map/merge-map.compon
 import { ConcatMapComponent } from './observable-sikho/concat-map/concat-map.component';
 import { SwitchMapComponent } from './observable-sikho/switch-map/switch-map.component';
 import { ShareReplayComponent } from './observable-sikho/share-replay/share-replay.component';
-import { AngularFormsComponent } from './angular-topics/angular-forms/angular-forms.component';
+import { AuthenticationFormsComponent } from './angular-topics/authentication-forms/authentication-forms.component';
 
 @NgModule({
   declarations: [
@@ -55,8 +55,7 @@ import { AngularFormsComponent } from './angular-topics/angular-forms/angular-fo
     CompSub2Component,
     CompSub3Component,    
     StringLimitPipe, ReplaySubjectComponent, ForkJoinComponent, RouteResolveComponent, AsyncSubjectComponent, ConcatComponent, 
-    MergeComponent, MergeMapComponent, ConcatMapComponent, SwitchMapComponent, ShareReplayComponent,
-    AngularFormsComponent
+    MergeComponent, MergeMapComponent, ConcatMapComponent, SwitchMapComponent, ShareReplayComponent, AuthenticationFormsComponent
   ],
   imports: [
     CommonModule,
