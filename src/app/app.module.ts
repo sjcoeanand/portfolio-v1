@@ -9,6 +9,7 @@ import { FrontendLearningComponent } from './modules/frontend-learning/frontend-
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { StringLimitPipe } from './pipes/string-limit.pipe';
+import { CustomDirectiveDirective } from './custom-directive.directive';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { StringLimitPipe } from './pipes/string-limit.pipe';
     LandingPageComponent,
     NavbarComponent,
     FrontendLearningComponent,
+    CustomDirectiveDirective,
   ],
   imports: [
     BrowserModule,
