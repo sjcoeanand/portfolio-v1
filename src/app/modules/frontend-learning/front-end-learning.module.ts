@@ -33,6 +33,9 @@ import { ConcatMapComponent } from './observable-sikho/concat-map/concat-map.com
 import { SwitchMapComponent } from './observable-sikho/switch-map/switch-map.component';
 import { ShareReplayComponent } from './observable-sikho/share-replay/share-replay.component';
 import { AuthenticationFormsComponent } from './angular-topics/authentication-forms/authentication-forms.component';
+import { FormBasicComponent } from './form-basic/form-basic.component';
+import { ToUpperCasePipe } from './to-upper-case.pipe';
+import { ObservableVsSubjectComponent } from './observable-sikho/observable-vs-subject/observable-vs-subject.component';
 
 @NgModule({
   declarations: [
@@ -54,12 +57,14 @@ import { AuthenticationFormsComponent } from './angular-topics/authentication-fo
     CompSub1Component,
     CompSub2Component,
     CompSub3Component,    
+    FormBasicComponent,
     StringLimitPipe, ReplaySubjectComponent, ForkJoinComponent, RouteResolveComponent, AsyncSubjectComponent, ConcatComponent, 
-    MergeComponent, MergeMapComponent, ConcatMapComponent, SwitchMapComponent, ShareReplayComponent, AuthenticationFormsComponent
+    MergeComponent, MergeMapComponent, ConcatMapComponent, SwitchMapComponent, ShareReplayComponent, AuthenticationFormsComponent, FormBasicComponent, ToUpperCasePipe, ObservableVsSubjectComponent
   ],
   imports: [
     CommonModule,
     FrontEndLearningRoutingModule,FormsModule,ReactiveFormsModule
-  ]
+  ],
+  exports: [FormBasicComponent]
 })
 export class FrontEndLearningModule { }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from './modules/landing-page/landing-page.component';
+import { FormBasicComponent } from './modules/frontend-learning/form-basic/form-basic.component';
 const routes: Routes = [
   {
     path : '',
@@ -12,6 +13,11 @@ const routes: Routes = [
     data : {
       breadcumb : 'Learning'
     }
+  },
+  
+  {
+    path: 'form-basic',
+    component : FormBasicComponent
   },
   {
     path: '**', 

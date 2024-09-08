@@ -21,7 +21,7 @@ export class MergeMapComponent {
 
     // Example 1
       custObs1.pipe(
-        map(x => this.getVideoData(x)),
+        map(x => x),
       ).subscribe(res => {
         this.servInst.printStream(res, 'custObsMap1')
       })

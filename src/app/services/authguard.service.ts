@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthguardService {
 
-  sampleServInst : SampleService = Inject(SampleService)
+  // sampleServInst : SampleService = Inject(SampleService)
 
   
  
@@ -16,6 +16,6 @@ export class AuthguardService {
 }
 
 
-export const addEditClietResolver: ResolveFn<any> = (route: ActivatedRouteSnapshot, state: RouterStateSnapshot) =>{
+export const addEditClietResolver: ResolveFn<any> = () =>{
   return inject(SampleService).fetchPhotosfromJsonPlaceholder1();
 }

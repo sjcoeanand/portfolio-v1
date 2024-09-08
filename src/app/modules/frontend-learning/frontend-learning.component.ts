@@ -388,11 +388,17 @@ obs1.subscribe(data => console.log(data))
     let entredString = this.searchForm?.valueChanges;   
     
     entredString?.pipe(  
-      map(res => res.searchInput1),
+      map(res => {
+        console.log('res.searchInput1', res.searchInput1);
+        
+        return res.searchInput1
+      }),
       debounceTime(500),
       distinctUntilChanged(),
       switchMap(data =>  this.searchService.fetchSearchData(data))
     ).subscribe((res1:any)=>{
+      console.log('kola', res1);
+      
       if(res1.length == 20){
         this.filterData = []
       } else {

@@ -28,6 +28,8 @@ import { ConcatMapComponent } from './observable-sikho/concat-map/concat-map.com
 import { SwitchMapComponent } from './observable-sikho/switch-map/switch-map.component';
 import { ShareReplayComponent } from './observable-sikho/share-replay/share-replay.component';
 import { AuthenticationFormsComponent } from './angular-topics/authentication-forms/authentication-forms.component';
+import { FormBasicComponent } from './form-basic/form-basic.component';
+import { ObservableVsSubjectComponent } from './observable-sikho/observable-vs-subject/observable-vs-subject.component';
 
 
 const routes: Routes = [
@@ -141,7 +143,12 @@ const routes: Routes = [
   {
     path: 'login',
     component : AuthenticationFormsComponent
+  },
+  {
+    path: 'obsvsSubject',
+    component : ObservableVsSubjectComponent
   }
+  
 ];
 
 @NgModule({
