@@ -13,6 +13,7 @@ import { LoginComponent } from './modules/login/login.component';
 import { SignupComponent } from './modules/signup/signup.component';
 import { AlluserComponent } from './modules/alluser/alluser.component';
 import { CustomInterceptor } from './services/custom.interceptor';
+import { DynamicTableComponent } from './dynamic-table/dynamic-table.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CustomInterceptor } from './services/custom.interceptor';
     LoginComponent,
     SignupComponent,
     AlluserComponent,
+    DynamicTableComponent,
   ],
   imports: [
     BrowserModule,
