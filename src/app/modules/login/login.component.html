@@ -1,0 +1,16 @@
+  
+  <div class="container mt-5 ">
+    <div class="row justify-content-center">
+        <div class="col-md-5 p-3 border boder-info">
+            <div class="mb-3">
+                <label for="emailId" class="form-label">Email</label>
+                <input type="email" class="form-control" id="emailId" #email placeholder="Enter Email Id">
+            </div>
+            <div class="mb-3">
+                <label for="passwd" class="form-label">Password</label>
+                <input type="password" class="form-control" #password id="passwd" placeholder="Enter correct password">
+            </div>
+            <button type="button" class="btn btn-warning" (click)="login(email.value, password.value)">Login</button>
+        </div>
+    </div>
+  </div>

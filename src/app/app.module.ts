@@ -7,8 +7,12 @@ import { LandingPageComponent } from './modules/landing-page/landing-page.compon
 import { NavbarComponent } from './modules/navbar/navbar.component';
 import { FrontendLearningComponent } from './modules/frontend-learning/frontend-learning.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { CustomDirectiveDirective } from './custom-directive.directive';
+import { LoginComponent } from './modules/login/login.component';
+import { SignupComponent } from './modules/signup/signup.component';
+import { AlluserComponent } from './modules/alluser/alluser.component';
+import { CustomInterceptor } from './services/custom.interceptor';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,9 @@ import { CustomDirectiveDirective } from './custom-directive.directive';
     NavbarComponent,
     FrontendLearningComponent,
     CustomDirectiveDirective,
+    LoginComponent,
+    SignupComponent,
+    AlluserComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +31,9 @@ import { CustomDirectiveDirective } from './custom-directive.directive';
     FormsModule ,
     HttpClientModule
   ],
-  providers: [ {provide : LocationStrategy , useClass: HashLocationStrategy}],
+  providers: [ {provide : LocationStrategy , useClass: HashLocationStrategy}, {
+    provide:HTTP_INTERCEPTORS, useClass:CustomInterceptor,multi : true 
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
